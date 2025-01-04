@@ -9,7 +9,7 @@ const HeroBackground = () => {
       <FaNode size={60} className="animate-bell  absolute top-28 right-2/3 hidden text-green-400 sm:inline-block" />
       <SiMaterialui size={50} className="absolute  top-120 right-40 hidden animate-bounce text-blue-400 sm:inline-block" />
       <FaGitAlt
-        size={50}
+        size={60}
         className="animate-move  absolute bottom-10 right-20 hidden sm:inline-block md:right-48"
       />
       <SiTailwindcss size={50} className="absolute  top-36 right-10 hidden text-pink-500 sm:inline-block md:right-24" />
