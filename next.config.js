@@ -6,6 +6,11 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  output: 'export',
+  reactStrictMode: true,
+  images: {
+    unoptimized: true, 
+  },
 }
 
 module.exports = nextConfig
