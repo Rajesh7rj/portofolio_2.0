@@ -7,10 +7,10 @@ import { UrlObject } from 'url';
 import classNames from 'classnames';
 
 type Props = {
-  imageUrl: string;
-  category: string;
-  title: string;
-  href: string | UrlObject;
+  imageUrl:  any;
+  category:  any;
+  title:  any;
+  href: any;
 };
 
 const Portfolio = ({ imageUrl, category, title, href }: Props) => {

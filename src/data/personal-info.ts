@@ -5,7 +5,7 @@ export const personalInfo = {
     mobile: "+919724167245",
     email: "rajeshjanyani7@gmail.com",
     address: "Baroda, Gujarat, India",
-    totalProjectsDone: "5+",
+    totalProjectsDone: "7+",
     totalExperience: "2+",
     
     generateAboutMe() {
