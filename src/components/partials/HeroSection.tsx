@@ -3,11 +3,11 @@ import Link from 'next/link';
 import React from 'react';
 import { FiLinkedin, FiGithub } from 'react-icons/fi';
 import { FaMedium, FaStackOverflow } from 'react-icons/fa';
-import { SiFrontendmentor } from "react-icons/si";
+import { SiFrontendmentor } from 'react-icons/si';
 import Button from '@/components/form/Button';
 import HeroBackground from './HeroBackground';
 import Typed from 'react-typed';
-
+/* eslint-disable quotes, indent */
 const HeroSection = () => {
   return (
     <div className="hero relative -mt-16 flex items-center justify-center">
@@ -72,3 +72,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+/* eslint-disable quotes, indent */

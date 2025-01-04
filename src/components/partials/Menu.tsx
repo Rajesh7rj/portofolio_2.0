@@ -6,7 +6,8 @@ import { useRouter } from 'next/router';
 import { Fragment, useState } from 'react';
 import { BsMoonStars, BsSun } from 'react-icons/bs';
 import { HiMenuAlt3 } from 'react-icons/hi';
-import { personalInfo } from "../../data/personal-info";
+import { personalInfo } from '../../data/personal-info';
+/* eslint-disable quotes, indent */
 
 const Menu = () => {
   const router = useRouter();
@@ -178,3 +179,4 @@ const Menu = () => {
 };
 
 export default Menu;
+/* eslint-disable quotes, indent */

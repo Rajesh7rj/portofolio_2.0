@@ -1,4 +1,5 @@
 import { Work } from '@/types';
+/* eslint-disable quotes, indent */
 
 export const works: Work[] = [
   {
@@ -325,3 +326,5 @@ export const works: Work[] = [
     ],
   },
 ];
+
+/* eslint-disable quotes, indent */

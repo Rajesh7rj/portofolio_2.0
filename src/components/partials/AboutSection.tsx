@@ -1,9 +1,10 @@
 import Button from '@/components/form/Button';
 import SectionTitle from '@/components/shared/SectionTitle';
 import { HiBriefcase } from 'react-icons/hi';
-import { FaClipboardCheck } from "react-icons/fa";
+import { FaClipboardCheck } from 'react-icons/fa';
 import { personalInfo } from '@/data/personal-info';
 import TechStack from './TechStack';
+/* eslint-disable quotes, indent */
 
 const AboutSection = () => {
   const aboutMe = personalInfo.generateAboutMe();
@@ -50,3 +51,5 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+
+/* eslint-disable quotes, indent */

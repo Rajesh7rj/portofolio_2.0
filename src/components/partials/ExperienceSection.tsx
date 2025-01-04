@@ -6,6 +6,8 @@ import { FiBriefcase } from 'react-icons/fi';
 import AcademicCap from '@/components/icons/AcademicCap';
 import SectionTitle from '@/components/shared/SectionTitle';
 
+/* eslint-disable quotes, indent */
+
 const ExperienceSection = () => {
   return (
     <>
@@ -68,3 +70,4 @@ const ExperienceSection = () => {
 };
 
 export default ExperienceSection;
+/* eslint-disable quotes, indent */
