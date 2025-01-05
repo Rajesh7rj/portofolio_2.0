@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useEffect } from 'react';
 
 export enum Theme {
   LIGHT = 'light',
@@ -12,7 +12,7 @@ type ThemeContextType = {
 
 type ThemeProviderProps = {
   children: React.ReactNode;
-}
+};
 
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
 
@@ -20,28 +20,22 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = React.useState<Theme>(Theme.DARK);
 
   const toggleTheme = () => {
-    if (theme === Theme.LIGHT) {
-      setTheme(Theme.DARK);
-      document.documentElement.classList.add(Theme.DARK);
-      localStorage.setItem('theme', Theme.DARK);
-    } else {
-      setTheme(Theme.LIGHT);
-      document.documentElement.classList.remove(Theme.DARK);
-      localStorage.setItem('theme', Theme.LIGHT);
-    }
+    const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
+    setTheme(newTheme);
+    document.documentElement.classList.toggle(Theme.DARK, newTheme === Theme.DARK);
+    localStorage.setItem('theme', newTheme);
   };
 
   useEffect(() => {
-    const localTheme = localStorage.getItem('theme');
-    if (localTheme) {
-      setTheme(localTheme as Theme);
-      if (localTheme === Theme.DARK) {
-        document.documentElement.classList.add(Theme.DARK);
-      }
-    }
-    return () => {
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.classList.toggle(Theme.DARK, savedTheme === Theme.DARK);
+    } else {
+      // If no theme is saved, default to dark
       setTheme(Theme.DARK);
-    };
+      document.documentElement.classList.add(Theme.DARK);
+    }
   }, []);
 
   return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
