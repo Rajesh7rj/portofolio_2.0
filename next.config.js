@@ -7,8 +7,8 @@ const nextConfig = {
   output: 'export',
   reactStrictMode: true,
   images: {
-    unoptimized: true, 
+    unoptimized: true,  // Unoptimized images for export mode
   },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
