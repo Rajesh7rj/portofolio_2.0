@@ -17,7 +17,7 @@ const HeroSection = () => {
           <Image src="/images/avatar/man.png" width={180} height={180} alt="avatar" />
         </div>
         <h1 className="mt-4 text-3xl font-bold ">Rajesh Janyani</h1>
-        <div className="mt-2 flex gap-1">
+        <div className="mt-2 flex gap-1 text-[18px]">
           {' '}
           I'm a {' '}<>
           <Typed

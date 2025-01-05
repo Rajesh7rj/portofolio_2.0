@@ -23,22 +23,22 @@ const ContactSection = () => {
 
   const openGmail = () => {
     const { name, email, subject, message } = formData;
-
+  
     // Check if all fields are filled
     if (!name || !email || !subject || !message) {
       alert('Please fill out all fields.');
       return;
     }
-
+  
     // Simple email validation regex
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
       alert('Please enter a valid email address.');
       return;
     }
-
+  
     // Construct the mailto link
-    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}%0A%0A--%0A%0A${encodeURIComponent(name)}`;
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=rajeshjanyani7@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}%0A%0A--%0A%0A${encodeURIComponent(name)}`;
     window.open(mailtoLink, '_blank');
   };
 
