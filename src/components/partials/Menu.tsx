@@ -37,7 +37,7 @@ const Menu = () => {
               </a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/blog">
               <a
                 className={classNames(
@@ -50,7 +50,7 @@ const Menu = () => {
                 Blog
               </a>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/contact">
               <a
@@ -69,9 +69,9 @@ const Menu = () => {
         <button
           type="button"
           className="ml-auto transition-colors duration-150 hover:text-primary-500 md:-mt-0.5 md:ml-3"
-          // onClick={() => toggleTheme()}
+          onClick={() => toggleTheme()}
         >
-          {/* {theme === Theme.LIGHT ? <BsMoonStars size={20} /> : <BsSun size={20} />} */}
+          {theme === Theme.LIGHT ? <BsMoonStars size={20} /> : <BsSun size={20} />}
         </button>
         <button
           type="button"
@@ -145,7 +145,7 @@ const Menu = () => {
                       Works
                     </a>
                   </Link>
-                  <Link href="/blog">
+                  {/* <Link href="/blog">
                     <a
                       className={classNames(
                         { 'text-primary-500': router.asPath == '/blog' },
@@ -154,7 +154,7 @@ const Menu = () => {
                     >
                       Blog
                     </a>
-                  </Link>
+                  </Link> */}
                   <Link href="/contact">
                     <a
                       className={classNames(

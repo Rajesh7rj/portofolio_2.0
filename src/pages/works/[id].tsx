@@ -39,11 +39,11 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
               </div>
             ))}
           </Slider>
-          <div className="mt-6 flex justify-center">
+          {/* <div className="mt-6 flex justify-center">
             <Link href={work.previewUrl}>
               <a className="btn">Live Preview</a>
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="my-10">

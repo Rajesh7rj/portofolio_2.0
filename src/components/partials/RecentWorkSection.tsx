@@ -9,7 +9,7 @@ const RecentWorkSection = () => {
       <SectionTitle>Recent Works</SectionTitle>
       <div className="mt-10 grid gap-4 xs:grid-cols-2 md:grid-cols-3 md:gap-8">
         {works
-          ?.filter((_, index) => index < 6)
+          ?.filter((_, index) => index < 3)
           ?.map((work) => (
             <Portfolio
               key={work.id}

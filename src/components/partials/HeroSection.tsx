@@ -19,8 +19,6 @@ const HeroSection = () => {
         <h1 className="mt-4 text-3xl font-bold ">Rajesh Janyani</h1>
         <div className="mt-2 flex gap-1">
           {' '}
-          <span className="text-[22px] text-blue-500 font-[700]">{"<div>"}</span>
-          <span className="my-[5px] flex !justify-center !item-center">
           I'm a {' '}<>
           <Typed
             className="text-primary-400"
@@ -29,9 +27,7 @@ const HeroSection = () => {
             backSpeed={50}
             loop />
             </>
-          </span>
           {" "}
-          <span className="text-[22px] text-blue-500 font-[700]">{"</div>"}</span>
         </div>
         <div className="mt-4  flex gap-5">
           <Link href="https://www.linkedin.com/in/rajesh-janyani">
