@@ -17,7 +17,7 @@ type ThemeProviderProps = {
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = React.useState<Theme>(Theme.LIGHT);
+  const [theme, setTheme] = React.useState<Theme>(Theme.DARK);
 
   const toggleTheme = () => {
     if (theme === Theme.LIGHT) {
