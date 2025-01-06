@@ -16,7 +16,7 @@ const reviewSettings: Settings = {
 const Testimonial = () => {
   return (
     <>
-      <SectionTitle>Client Reviews</SectionTitle>
+      <SectionTitle>Testimonials</SectionTitle>
       <div className="mt-16">
         <Slider {...reviewSettings}>
           {reviews.map((review, index) => (
@@ -29,7 +29,7 @@ const Testimonial = () => {
                 <p className="text-sm text-gray-400 dark:text-gray-200">
                   {review.author.designation} at {review.author.company}.
                 </p>
-                <div className="mt-6 max-w-2xl rounded-2xl bg-white p-8 text-gray-500 shadow-lg dark:bg-gray-800 dark:text-gray-200">
+                <div className="mt-6 max-w-[900px] rounded-2xl bg-white p-8 text-gray-500 shadow-lg dark:bg-gray-800 dark:text-gray-200">
                   {review.comment}
                 </div>
               </div>

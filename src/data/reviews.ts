@@ -3,35 +3,19 @@ import { Review } from '@/types';
 export const reviews: Review[] = [
   {
     author: {
-      name: 'John Doe',
+      name: 'Nikunj Prajapati',
       imageUrl: '/images/avatar/avatar-1.png',
-      designation: 'General Manager',
-      company: 'Lockheed Martin',
+      designation: 'Lead Quality Analyst',
+      company: 'Ventaja IT Solutions',
     },
-    comment: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur labore similique quas fuga ad
-        doloremque natus iste modi numquam sapiente esse tenetur, ipsam, nisi vitae et vero, ducimus dolorem
-        est! Good luck! 🔥`,
-  },
-  {
-    author: {
-      name: 'William Smith',
-      imageUrl: '/images/avatar/avatar-2.png',
-      designation: 'CEO',
-      company: 'Bomerang',
-    },
-    comment: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur labore similique quas fuga ad
-        doloremque natus iste modi numquam sapiente esse tenetur, ipsam, nisi vitae et vero, ducimus dolorem
-        est! Good luck! 🔥`,
-  },
-  {
-    author: {
-      name: 'Eloise Harper',
-      imageUrl: '/images/avatar/avatar-3.png',
-      designation: 'CTO',
-      company: 'Starbucks',
-    },
-    comment: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur labore similique quas fuga ad
-        doloremque natus iste modi numquam sapiente esse tenetur, ipsam, nisi vitae et vero, ducimus dolorem
-        est! Good luck! 🔥`,
+    comment: `
+          I had the pleasure of working with Rajesh Janyani and can confidently say they are an exceptional 
+          Next.js developer. With a deep technical understanding, Rajesh Janyani consistently delivered 
+          innovative solutions and played a key role in leading sprints and retrospectives. 
+          They are also a fantastic mentor, always willing to help the team and guide junior developers. 
+          Their leadership, product insight, and ability to collaborate effectively make them a valuable asset. 
+          A true go-to person for both technical challenges and team support. 
+          I highly recommend Rajesh Janyani for any team looking for a skilled and reliable developer.
+    `,
   },
 ];
