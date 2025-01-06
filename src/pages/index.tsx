@@ -14,7 +14,9 @@ import type { NextPage } from 'next';
 const Home: NextPage = () => {
   return (
     <AppLayout title="Home">
+      <section className="container">
       <HeroSection />
+      </section>
       <section className="container pt-20 pb-10">
         <AboutSection />
       </section>

@@ -22,7 +22,7 @@ const HeroBackground = () => {
         size={50}
         className="absolute bottom-20  left-16 hidden animate-bounce text-amber-500 sm:inline-block md:left-40"
       />
-      <FaReact size={50} className="absolute top-96 left-1/4 hidden animate-spin text-blue-400 sm:inline-block" />
+      <FaReact size={50} className="absolute top-1/2 left-1/4 hidden animate-spin text-blue-400 sm:inline-block" />
     </>
   );
 };

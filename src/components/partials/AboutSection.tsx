@@ -4,6 +4,7 @@ import { HiBriefcase } from 'react-icons/hi';
 import { FaClipboardCheck } from 'react-icons/fa';
 import { personalInfo } from '@/data/personal-info';
 import TechStack from './TechStack';
+import { FaTrophy } from "react-icons/fa";
 /* eslint-disable quotes, indent */
 
 const AboutSection = () => {
@@ -20,13 +21,8 @@ const AboutSection = () => {
           {/* <Button className="mt-5">Download CV</Button> */}
         </div>
       </div>
-      {/* tech stack */}
-      <div className="mt-20">
-      <SectionTitle>Tech Stack</SectionTitle>
-      <TechStack />
-      </div>
       {/* Overview */}
-      <div className="mt-12 flex flex-wrap justity-center item-center gap-10">
+      <div className="mt-4 flex flex-wrap justity-center item-center gap-10">
         <div className="flex">
           <div className="mr-5 text-gray-300">
             <FaClipboardCheck size={50} />
@@ -45,6 +41,20 @@ const AboutSection = () => {
             <p className="mt-1">Years of experience</p>
           </div>
         </div>
+        <div className="flex">
+          <div className="mr-5 text-gray-300">
+            <FaTrophy size={50} />
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold">{personalInfo?.employeeOfTheYear}</h2>
+            <p className="mt-1">immence enterprise pvt ltd</p>
+          </div>
+        </div>
+      </div>
+        {/* tech stack */}
+        <div className="mt-24">
+      <SectionTitle>Tech Stack</SectionTitle>
+      <TechStack />
       </div>
     </>
   );

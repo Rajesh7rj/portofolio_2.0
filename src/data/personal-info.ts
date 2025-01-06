@@ -8,7 +8,7 @@ export const personalInfo = {
     address: 'Baroda, Gujarat, India',
     totalProjectsDone: '7+',
     totalExperience: '2+',
-    
+    employeeOfTheYear:"Employee of the year - 2023/24",
     generateAboutMe() {
         return `
         I’m a Software Developer with over ${this.totalExperience} years of experience in building responsive and engaging applications. 
