@@ -51,13 +51,13 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
           <p className="mt-4">{work.description}</p>
           <h3 className="mt-10 text-xl font-semibold">Technologies Used</h3>
           <ul className="mt-4 list-disc pl-4">
-            {work.techUsed.map((feature, index) => (
+            {work?.techUsed?.map((feature, index) => (
               <li key={index} dangerouslySetInnerHTML={{ __html: feature }}></li>
             ))}
           </ul>
           <h3 className="mt-10 text-xl font-semibold">Key Features</h3>
           <ul className="mt-4 list-disc pl-4">
-            {work.featureList.map((feature, index) => (
+            {work?.featureList?.map((feature, index) => (
               <li key={index} dangerouslySetInnerHTML={{ __html: feature }}></li>
             ))}
           </ul>
