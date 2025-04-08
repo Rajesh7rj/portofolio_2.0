@@ -8,20 +8,12 @@ export const personalInfo = {
     address: 'Baroda, Gujarat, India',
     totalProjectsDone: '7+',
     totalExperience: '2+',
-    employeeOfTheYear:"Employee of the year - 2023/24",
+    employeeOfTheYear:"Employee of The Year - 2023/24",
     generateAboutMe() {
         return `
-        I’m a Software Developer with over ${this.totalExperience} years of experience in building responsive and engaging applications. 
-        Specializing in ReactJS, Next.js, TypeScript, and JavaScript, I’m dedicated to delivering high-quality, 
-        user-focused solutions.
+        I’m a Software Developer passionate about building modern, responsive, and high-impact web applications. With a strong focus on React.js, Next.js, TypeScript, and JavaScript, I create clean, scalable, and user-centric solutions.
 
-        I excel at transforming complex requirements into seamless digital experiences and work closely with 
-        design, backend, and QA teams using Agile and Scrum to ensure efficient, timely project delivery. 
-        I take pride in writing clean, maintainable code and continuously improving development processes to create scalable, 
-        high-performance apps.
-
-        With a strong problem-solving mindset and a passion for innovation, I embrace new challenges 
-        and continually learn to stay ahead in the dynamic field of web development.
+        I thrive in Agile/Scrum environments, leading sprints, collaborating across teams, and ensuring timely, quality-driven delivery. Beyond coding, I value clear communication, team leadership, and building products that solve real-world problems and drive growth.
         `;
     }
 };

@@ -1,14 +1,35 @@
-import Button from '@/components/form/Button';
+'use client'
 import SectionTitle from '@/components/shared/SectionTitle';
 import { HiBriefcase } from 'react-icons/hi';
 import { FaClipboardCheck } from 'react-icons/fa';
 import { personalInfo } from '@/data/personal-info';
 import TechStack from './TechStack';
 import { FaTrophy } from "react-icons/fa";
+import { totalExperience } from '@/utilis/utilis';
+import { works } from '../../data/works';
 /* eslint-disable quotes, indent */
 
 const AboutSection = () => {
   const aboutMe = personalInfo.generateAboutMe();
+  const skills = [
+    'HRM',
+    'CMS',
+    "E-commerce",
+    'ERP',
+    'Web Sites',
+    'Team Leadership',
+    'Problem Solving',
+    'Critical Thinking',
+    'Agile Methodologies',
+    'Performance Optimization',
+    'Clean Code Practices',
+    'Performance Optimization',
+    'UI/UX Collaboration',
+    'Code Review & Mentorship',
+    'Sprint Planning & Execution', 
+    'Cross-Functional Communication',  
+    'Continuous Learning'
+  ];
   return (
     <>
       <SectionTitle>About Me</SectionTitle>
@@ -18,7 +39,22 @@ const AboutSection = () => {
           <p className="text-justify">
           {aboutMe}
           </p>
-          {/* <Button className="mt-5">Download CV</Button> */}
+          
+          <div className="mt-6">
+            <h2 className="text-xl font-semibold mb-4">Top Skills</h2>
+            <div className="flex flex-wrap gap-3">
+              {skills.map((skill, index) => (
+                <span
+                  key={index}
+                  className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm hover:bg-gray-200 transition"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+ 
         </div>
       </div>
       {/* Overview */}
@@ -28,7 +64,7 @@ const AboutSection = () => {
             <FaClipboardCheck size={50} />
           </div>
           <div>
-            <h2 className="text-3xl font-bold">{personalInfo?.totalProjectsDone}</h2>
+            <h2 className="text-3xl font-bold">{works.length} +</h2>
             <p className="mt-1">Projects Completed</p>
           </div>
         </div>
@@ -37,7 +73,7 @@ const AboutSection = () => {
             <HiBriefcase size={50} />
           </div>
           <div>
-            <h2 className="text-3xl font-bold">{personalInfo?.totalExperience}</h2>
+            <h2 className="text-3xl font-bold">{totalExperience()}</h2>
             <p className="mt-1">Years of experience</p>
           </div>
         </div>
@@ -47,7 +83,7 @@ const AboutSection = () => {
           </div>
           <div>
             <h2 className="text-3xl font-bold">{personalInfo?.employeeOfTheYear}</h2>
-            <p className="mt-1">immence enterprise pvt ltd</p>
+            <p className="mt-1">Immence Enterprise Pvt Ltd</p>
           </div>
         </div>
       </div>
@@ -61,5 +97,7 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+
+
 
 /* eslint-disable quotes, indent */

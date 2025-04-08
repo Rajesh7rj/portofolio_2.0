@@ -13,13 +13,13 @@ export const educations: Education[] = [
     school: 'Udemy',
     startDate: 'Apr 2022',
     endDate: 'Sep 2022',
-    description: 'Completed comprehensive web development learning, including HTML, CSS, JavaScript (ES3 to modern JavaScript), ReactJS, Git, project deployment, and hands-on project development.',
+    description: 'Comprehensive training in CSS, JavaScript (ES3 to modern), React.js, Git, deployment, and hands-on projects',
   },
   {
     degree: 'React JS',
     school: 'NamsateDev.com',
     startDate: 'March 2023',
     endDate: 'Aug 2023',
-    description: 'In-depth exploration of React JS Technology and its applications.',
+    description: 'In-depth understanding of React.js and its practical applications.',
   },
 ];

@@ -2,32 +2,32 @@ import { Experience } from '@/types';
 
 export const experiences: Experience[] = [
   {
-    jobTitle: 'NextJS Developer',
+    jobTitle: 'Software Developer (NextJS)',
     company: 'Heliconia Solutions',
     startDate: 'Oct 2024',
     endDate: 'Present',
-    description: 'I have experience in sprint and team leadership, working under Agile methodology and Scrum to deliver better results. I break down large projects into manageable sprints and ensure on-time delivery by actively communicating with the design team, QA, and backend developers. I actively participate in retrospectives at the end of each sprint, learning new technologies, providing innovative solutions, adapting quickly to challenges, and delivering effective solutions.',
+    description: 'Agile Project Management • Cross-Functional Collaboration • Issue Resolution & Debugging • Team Mentorship • Code Review • REST API Integration • Performance Optimization • Deployment & Release Management • Customer-Centric Problem Solving • Ownership & Accountability',
   },
 
   {
     jobTitle: 'Software Developer',
-    company: 'immence enterprise pvt ltd.',
+    company: 'Immence Enterprise Pvt Ltd',
     startDate: 'May 2023',
     endDate: 'Sep 2023',
-    description: 'I have worked with a team on various projects, ranging from HRM systems to eCommerce sites. I utilized Next.js features to create Static Site Generation (SSG) websites and admin panels similar to a CMS. I advanced my skills by transitioning from React.js to Next.js, and from JavaScript to TypeScript. I gained expertise in state management and collaborated with the team on task management, daily reporting, and utilizing various UI libraries.',
+    description: 'Next.js Development (SSG/SSR) • TypeScript Migration & Maintenance • React.js • Redux / Zustand / Context API • Tailwind CSS • Material UI • Radix UI • Component Design Systems • API Integration (REST & GraphQL) • CI/CD & Deployment (Vercel, Netlify, Render) • Agile Tools & Workflow Management'
   },
   {
     jobTitle: 'Software Developer',
     company: 'Freelance',
-    startDate: 'May 2022',
+    startDate: 'Jan 2022',
     endDate: 'Apr 2023',
-    description: 'ReactJs, NextJs, MUI, CSS, SASS/SCSS,TailwindCSS, GIT, Code Review and Deployment, Redux, Client Communication, Team Work, Task Planning and Execution, On time Delivery',
+    description: 'Responsive Web Development • Cross-Browser Compatibility • API Optimization • Legacy Code Refactoring • Client Requirement Gathering • UI/UX Collaboration • Modular Architecture • Bundle Size Optimization • Clean Code & Maintainability • Product Thinking & User-Centric Development',
   },
   {
     jobTitle: 'Teacher',
     company: 'Prayas Tuition Classes',
     startDate: 'Jul 2017',
-    endDate: 'Feb 2022',
-    description: 'Teaching, Monitoring, Creativity, Student-Centered Learning Approach, Parent-Teacher Communication, Student Engagement, Problem Solving, Effective Doubt Resolution'
+    endDate: 'Oct 2021',
+    description: 'Teaching • Monitoring • Creativity • Student-Centered Learning Approach • Parent-Teacher Communication • Student Engagement • Problem Solving • Effective Doubt Resolution'
   },
 ];

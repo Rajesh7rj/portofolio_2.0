@@ -22,7 +22,7 @@ const HeroSection = () => {
           I'm a {' '}<>
           <Typed
             className="text-primary-400"
-            strings={['Frontend Developer', 'React JS Developer', 'Next JS Developer']}
+            strings={['Software Developer', 'Frontend Developer', 'React JS Developer', 'Next JS Developer']}
             typeSpeed={90}
             backSpeed={50}
             loop />
@@ -40,22 +40,20 @@ const HeroSection = () => {
               <SiFrontendmentor size={25} />
             </a>
           </Link>
-          {/* <Link href="https://medium.com/">
+          <Link href="https://medium.com/@rajesh-janyani">
           <a className="text-gray-500 transition-colors duration-150 hover:text-primary-500" target="_blank">
             <FaMedium size={25} />
           </a>
-        </Link> */}
+        </Link>
         <Link href="https://github.com/Rajesh7rj">
           <a className="text-gray-500 transition-colors duration-150 hover:text-primary-500" target="_blank">
             <FiGithub size={25} />
           </a>
         </Link>
       </div>
-      {/* <Link href="/contact">
-        <a> */}
+      <a href="/Resume-Rajesh-Janyani.pdf" download>
           <Button className="mt-5 px-8">Download CV</Button>
-        {/* </a>
-      </Link> */}
+      </a> 
     </div>
     <div className="absolute bottom-0 flex flex-col items-center ">
         <p className="mb-3 text-sm">Scroll Down</p>

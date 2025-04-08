@@ -6,7 +6,7 @@ export const works: Work[] = [
     id: 1,
     title: 'Tuto.ph (Admin Panel)',
     category: 'HRMS',
-    thumbnailUrl: '/images/projects/tubo-1.png',
+    thumbnailUrl: '/images/projects/tubo-2.png',
     description: `
     Tubo.ph is a user-friendly HRMS platform designed for manpower agencies to simplify employee management and timekeeping. 
     It replaces outdated biometric systems with a modern app available on iOS and Android, offering features like attendance 
@@ -238,6 +238,7 @@ export const works: Work[] = [
       "Product Categories: Organized sections to easily browse and filter products by type, features, or popularity."
     ]
   },
+  {}
 ];
 
 /* eslint-disable quotes, indent */

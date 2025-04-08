@@ -31,8 +31,8 @@ export type Work = {
   images?: string[];
   previewUrl?: string;
   publishedAt?: string;
-  featureList: string[];
-  techUsed: string[];
+  featureList?: string[];
+  techUsed?: string[];
 };
 
 export type Post = {

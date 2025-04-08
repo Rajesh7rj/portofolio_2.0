@@ -18,15 +18,18 @@ const work = () => {
 
       <div className="container py-10 mb-10">
         <div className="grid gap-4 xs:grid-cols-2 md:grid-cols-3 md:gap-8">
-          {works.map((work) => (
-            <Portfolio
-              key={work.id}
-              imageUrl={work.thumbnailUrl}
-              category={work.category}
-              title={work.title}
-              href={`/works/${work.id}`}
-            />
-          ))}
+        {Array.isArray(works) &&
+          works
+            .filter((item) => Object.keys(item).length > 0) // keep only non-empty objects
+            .map((item) => (
+              <Portfolio
+                key={item.id}
+                imageUrl={item.thumbnailUrl}
+                category={item.category}
+                title={item.title}
+                href={`/works/${item.id}`}
+              />
+            ))}
         </div>
         {/* <div className="mt-10 flex items-center justify-center">
           <Button className="mt-5 bg-primary-500 px-8 font-semibold text-white hover:bg-primary-600 focus:ring-2 focus:ring-primary-200">
