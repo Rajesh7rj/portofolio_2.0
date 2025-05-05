@@ -7,12 +7,14 @@ import TechStack from './TechStack';
 import { FaTrophy } from "react-icons/fa";
 import { totalExperience } from '@/utilis/utilis';
 import { works } from '../../data/works';
+import { Theme, useTheme } from '@/hooks/use-theme';
 /* eslint-disable quotes, indent */
 
 const AboutSection = () => {
   const aboutMe = personalInfo.generateAboutMe();
+  const { theme, toggleTheme } = useTheme();
   const skills = [
-    'HRM',
+    'HRMS',
     'CMS',
     "E-commerce",
     'ERP',
@@ -21,12 +23,11 @@ const AboutSection = () => {
     'Problem Solving',
     'Critical Thinking',
     'Agile Methodologies',
-    'Performance Optimization',
+    'Sprint Planning & Execution',
     'Clean Code Practices',
     'Performance Optimization',
     'UI/UX Collaboration',
     'Code Review & Mentorship',
-    'Sprint Planning & Execution', 
     'Cross-Functional Communication',  
     'Continuous Learning'
   ];
@@ -46,7 +47,7 @@ const AboutSection = () => {
               {skills.map((skill, index) => (
                 <span
                   key={index}
-                  className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm hover:bg-gray-200 transition"
+                  className={`${ theme === Theme.LIGHT ? "bg-gray-500" : "bg-white"} ${ theme === Theme.LIGHT ? "text-white" : "text-gray-800"} px-3 py-1 rounded-full text-sm font-medium shadow-sm hover:bg-gray-200 transition`}
                 >
                   {skill}
                 </span>

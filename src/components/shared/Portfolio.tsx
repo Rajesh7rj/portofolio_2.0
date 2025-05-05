@@ -15,12 +15,13 @@ type Props = {
 const Portfolio = ({ imageUrl, category, title, href }: Props) => {
   return (
     <div className={classNames(styles['portfolio'], 'bg-white dark:bg-gray-800')}>
-            <div className="relative w-full pt-[75%]"> 
+      <div className="relative w-full pt-[0% !h-full"> 
       <Image 
        src={imageUrl}
        alt={title}
-       layout="fill"
+      //  layout="fill"
        objectFit="fill"
+       height={720} width={1280} layout="responsive"
        className="rounded-t-2xl"
       />
       </div>
