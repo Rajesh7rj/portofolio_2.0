@@ -51,9 +51,9 @@ const HeroSection = () => {
           </a>
         </Link>
       </div>
-      <a href="/Resume-Rajesh-Janyani.pdf" download>
+      {/* <a href="/Resume-Rajesh-Janyani.pdf" download> */}
           <Button className="mt-5 px-8">Download CV</Button>
-      </a> 
+      {/* </a>  */}
     </div>
     <div className="absolute bottom-0 flex flex-col items-center ">
         <p className="mb-3 text-sm">Scroll Down</p>
