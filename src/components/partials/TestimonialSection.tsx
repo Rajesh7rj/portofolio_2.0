@@ -30,7 +30,7 @@ const Testimonial = () => {
                   {review.author.designation} 
                   {/* at {review.author.company}. */}
                 </p>
-                <div className="mt-6 max-w-[900px] rounded-2xl bg-white p-8 text-gray-500 shadow-lg dark:bg-gray-800 dark:text-gray-200">
+                <div className="mt-6 max-w-[900px] rounded-2xl bg-white p-8 text-gray-500 shadow-lg dark:bg-gray-800 dark:text-gray-200 mx-2">
                   {review.comment}
                 </div>
               </div>
