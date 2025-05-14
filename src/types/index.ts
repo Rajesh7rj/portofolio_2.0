@@ -50,7 +50,7 @@ export type Review = {
     name: string;
     imageUrl: string;
     designation: string;
-    company: string;
+    company?: string;
   };
   comment: string;
 };
