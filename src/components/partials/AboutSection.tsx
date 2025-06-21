@@ -13,12 +13,22 @@ import { Theme, useTheme } from '@/hooks/use-theme';
 const AboutSection = () => {
   const aboutMe = personalInfo.generateAboutMe();
   const { theme, toggleTheme } = useTheme();
+  const highlights = [
+  'Led 7+ successful Agile sprints, driving fast-paced project delivery',
+  'Mentored and coached 4+ developers, enhancing team productivity and code quality',
+  'Guided 3+ junior developers on scalable architecture and modern frameworks',
+  'Reduced API redundancy by 30%, improving backend efficiency',
+  'Decreased production bugs by 45% through proactive debugging and testing',
+  'Developed reusable component libraries, boosting development speed by 25%',
+  'Migrated projects to TypeScript, cutting runtime errors by 40%',
+  'Delivered 40+ modules across HRMS, CMS, eCommerce, and admin platforms',
+];
+
   const skills = [
     'HRMS',
     'CMS',
     "E-commerce",
     'ERP',
-    'Web Sites',
     'Team Leadership',
     'Problem Solving',
     'Critical Thinking',
@@ -29,7 +39,6 @@ const AboutSection = () => {
     'UI/UX Collaboration',
     'Code Review & Mentorship',
     'Cross-Functional Communication',  
-    'Continuous Learning'
   ];
   return (
     <>
@@ -40,6 +49,15 @@ const AboutSection = () => {
           <p className="text-justify">
           {aboutMe}
           </p>
+
+          <div className="mt-8">
+            <h2 className="text-xl font-semibold mb-4">Highlights & Impact</h2>
+            <ul className="list-disc list-inside space-y-2 text-justify">
+              {highlights.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
           
           <div className="mt-6">
             <h2 className="text-xl font-semibold mb-4">Top Skills</h2>

@@ -35,11 +35,11 @@ const HeroSection = () => {
               <FiLinkedin size={25} />
             </a>
           </Link>
-          <Link href="https://www.frontendmentor.io/profile/Rajesh7rj">
+          {/* <Link href="https://www.frontendmentor.io/profile/Rajesh7rj">
             <a className="text-gray-500 transition-colors duration-150 hover:text-primary-500" target="_blank">
               <SiFrontendmentor size={25} />
             </a>
-          </Link>
+          </Link> */}
           <Link href="https://medium.com/@rajesh-janyani">
           <a className="text-gray-500 transition-colors duration-150 hover:text-primary-500" target="_blank">
             <FaMedium size={25} />
@@ -51,9 +51,9 @@ const HeroSection = () => {
           </a>
         </Link>
       </div>
-      {/* <a href="/Resume-Rajesh-Janyani.pdf" download> */}
+      <a href="/Resume-Rajesh-Janyani.pdf" download>
           <Button className="mt-5 px-8">Download CV</Button>
-      {/* </a>  */}
+      </a> 
     </div>
     <div className="absolute bottom-0 flex flex-col items-center ">
         <p className="mb-3 text-sm">Scroll Down</p>
