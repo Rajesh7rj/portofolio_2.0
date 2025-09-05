@@ -5,7 +5,7 @@ import { FaClipboardCheck } from 'react-icons/fa';
 import { personalInfo } from '@/data/personal-info';
 import TechStack from './TechStack';
 import { FaTrophy } from "react-icons/fa";
-import { totalExperience } from '@/utilis/utilis';
+import { teachingExp, totalExperience } from '@/utilis/utilis';
 import { works } from '../../data/works';
 import { Theme, useTheme } from '@/hooks/use-theme';
 /* eslint-disable quotes, indent */
@@ -52,7 +52,7 @@ const AboutSection = () => {
 
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-4">Highlights & Impact</h2>
-            <ul className="list-disc list-inside space-y-2 text-justify">
+            <ul className="list-disc list-inside space-y-2 text-start">
               {highlights.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -93,7 +93,7 @@ const AboutSection = () => {
           </div>
           <div>
             <h2 className="text-3xl font-bold">{totalExperience()}</h2>
-            <p className="mt-1">Years of experience</p>
+            <p className="mt-1">Years of experience in Development</p>
           </div>
         </div>
         <div className="flex">
@@ -103,6 +103,15 @@ const AboutSection = () => {
           <div>
             <h2 className="text-3xl font-bold">{personalInfo?.employeeOfTheYear}</h2>
             <p className="mt-1">Immence Enterprise Pvt Ltd</p>
+          </div>
+        </div>
+         <div className="flex">
+          <div className="mr-5 text-gray-300">
+            <HiBriefcase size={50} />
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold">{teachingExp}</h2>
+            <p className="mt-1">Years of experience in Teaching</p>
           </div>
         </div>
       </div>

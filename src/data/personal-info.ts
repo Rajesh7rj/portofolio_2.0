@@ -8,7 +8,7 @@ export const personalInfo = {
     address: 'Baroda, Gujarat, India',
     totalProjectsDone: '7+',
     totalExperience: '2+',
-    employeeOfTheYear:"Employee of The Year - 2023/24",
+    employeeOfTheYear:"EOTY",
     generateAboutMe() {
         return `
         Senior Software Developer delivering scalable React.js and Next.js applications. Experienced in

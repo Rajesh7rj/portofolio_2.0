@@ -16,4 +16,6 @@ export const totalExperience = () => {
   };
 
 
+export const teachingExp = "4"
+
   

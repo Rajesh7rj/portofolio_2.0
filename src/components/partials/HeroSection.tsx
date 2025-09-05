@@ -6,7 +6,7 @@ import { FaMedium, FaStackOverflow } from 'react-icons/fa';
 import { SiFrontendmentor } from 'react-icons/si';
 import Button from '@/components/form/Button';
 import HeroBackground from './HeroBackground';
-import Typed from 'react-typed';
+import {ReactTyped} from 'react-typed';
 /* eslint-disable quotes, indent */
 const HeroSection = () => {
   return (
@@ -20,9 +20,9 @@ const HeroSection = () => {
         <div className="mt-2 flex gap-1 text-[18px]">
           {' '}
           I'm a {' '}<>
-          <Typed
+          <ReactTyped
             className="text-primary-400"
-            strings={['Software Developer', 'Frontend Developer', 'React JS Developer', 'Next JS Developer']}
+            strings={['Software Developer', ]}
             typeSpeed={90}
             backSpeed={50}
             loop />
