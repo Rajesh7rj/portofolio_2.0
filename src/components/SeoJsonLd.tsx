@@ -11,6 +11,7 @@ export default function SeoJsonLd() {
       'https://www.linkedin.com/in/rajesh-janyani',
       'https://github.com/Rajesh7rj',
     ],
+    "logo":"https://rajeshjanyani.vercel.app/favicon.ico",
     knowsAbout: ['React', 'Next.js', 'TypeScript', 'Frontend Architecture', 'Full stack', 'Team Lead'],
   };
 
