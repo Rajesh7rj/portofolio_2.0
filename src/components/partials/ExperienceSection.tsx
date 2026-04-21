@@ -1,73 +1,102 @@
 import { educations } from '@/data/educations';
 import { experiences } from '@/data/experiences';
-import styles from '@/styles/modules/ExperienceSection.module.scss';
-import classNames from 'classnames';
-import { FiBriefcase } from 'react-icons/fi';
-import AcademicCap from '@/components/icons/AcademicCap';
-import SectionTitle from '@/components/shared/SectionTitle';
-
-/* eslint-disable quotes, indent */
+import React from 'react';
+import { FiBriefcase, FiBookOpen } from 'react-icons/fi';
 
 const ExperienceSection = () => {
   return (
-    <>
-      <SectionTitle>Experiences</SectionTitle>
-      <div className="py-15 mt-10 grid gap-8 md:grid-cols-1">
-        {/* Experience */}
-        <div>
-          <div className="rounded-2xl bg-white px-10 py-8 shadow-lg dark:bg-gray-800">
-            <ol className={classNames(styles['experience'], 'border-l border-gray-200 dark:border-gray-500')}>
-              {experiences.map((experience, index) => (
-                <li key={index} className={styles['experience-item']}>
-                  <span className="absolute -left-2.5 flex h-5 w-5 items-center justify-center rounded-full bg-white text-primary-500 ring-8 ring-white dark:bg-gray-700 dark:ring-gray-700">
-                    <FiBriefcase className="h-5" />
+    <div id="experience" className="py-24">
+      {/* Experience */}
+      <div>
+        <p className="section-label">02. Experience</p>
+        <h2 className="section-title">Where I&apos;ve Worked</h2>
+        <div className="section-divider" />
+
+        <div className="mt-8">
+          {experiences.map((exp, index) => (
+            <div key={index} className="timeline-item">
+              <div className="timeline-dot" />
+              <div
+                className="rounded-xl p-6"
+                style={{ backgroundColor: '#111', border: '1px solid #2a2a2a' }}
+              >
+                <div className="flex flex-wrap items-start justify-between gap-2">
+                  <div>
+                    <h3 className="text-lg font-bold" style={{ color: '#f9fafb' }}>
+                      {exp.jobTitle}
+                    </h3>
+                    <div className="mt-0.5 flex items-center gap-2">
+                      <FiBriefcase size={13} style={{ color: '#00ff88' }} />
+                      <span className="text-sm font-medium" style={{ color: '#00ff88' }}>{exp.company}</span>
+                    </div>
+                  </div>
+                  <span
+                    className="rounded-full px-3 py-1 text-xs"
+                    style={{
+                      backgroundColor: 'rgba(0,255,136,0.06)',
+                      border: '1px solid rgba(0,255,136,0.2)',
+                      color: '#9ca3af',
+                      fontFamily: 'JetBrains Mono, monospace',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {exp.startDate} – {exp.endDate}
                   </span>
-                  <time className="mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-200">
-                    {experience.startDate} - {experience.endDate}
-                  </time>
-                  <h3 className="mb-1 flex items-center text-lg font-semibold dark:text-gray-200">
-                    {experience.jobTitle}
-                  </h3>
-                  <p className="mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-200">
-                    {experience.company}
-                  </p>
-                  <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-200">
-                    {experience.description}
-                  </p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </div>
-        {/* Education */}
-        <div className='mt-20'>
-        <SectionTitle>Educations</SectionTitle>
-          <div className="rounded-2xl bg-white px-10 py-8 shadow-lg dark:bg-gray-800 mt-10">
-            <ol className={classNames(styles['education'], 'border-l border-gray-200 dark:border-gray-500')}>
-              {educations.map((education, index) => (
-                <li key={index} className={styles['education-item']}>
-                  <span className="absolute -left-2.5 flex h-5 w-5 items-center justify-center rounded-full bg-white text-primary-500 ring-8 ring-white dark:bg-gray-700 dark:ring-gray-700">
-                    <AcademicCap className="h-5" />
-                  </span>
-                  <time className="mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-200">
-                    {/* {education.startDate} - {education.endDate} */}
-                  </time>
-                  <h3 className="mb-1 flex items-center text-lg font-semibold dark:text-gray-200">
-                    {education.degree}
-                  </h3>
-                  <p className="mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-200">
-                    {education.school}
-                  </p>
-                  <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-200">{education.description}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
+                </div>
+                <p className="mt-4 text-sm leading-relaxed" style={{ color: '#9ca3af' }}>
+                  {exp.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </>
+
+      {/* Education */}
+      <div className="mt-20">
+        <p className="section-label">// Education</p>
+        <h2 className="section-title">Academic Background</h2>
+        <div className="section-divider" />
+
+        <div className="mt-8">
+          {educations.map((edu, index) => (
+            <div key={index} className="timeline-item">
+              <div className="timeline-dot" />
+              <div
+                className="rounded-xl p-6"
+                style={{ backgroundColor: '#111', border: '1px solid #2a2a2a' }}
+              >
+                <div className="flex flex-wrap items-start justify-between gap-2">
+                  <div>
+                    <h3 className="text-base font-bold" style={{ color: '#f9fafb' }}>
+                      {edu.degree}
+                    </h3>
+                    <div className="mt-0.5 flex items-center gap-2">
+                      <FiBookOpen size={13} style={{ color: '#00ff88' }} />
+                      <span className="text-sm" style={{ color: '#00ff88' }}>{edu.school}</span>
+                    </div>
+                  </div>
+                  <span
+                    className="rounded-full px-3 py-1 text-xs"
+                    style={{
+                      backgroundColor: 'rgba(0,255,136,0.06)',
+                      border: '1px solid rgba(0,255,136,0.2)',
+                      color: '#9ca3af',
+                      fontFamily: 'JetBrains Mono, monospace',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {edu.startDate} – {edu.endDate}
+                  </span>
+                </div>
+                <p className="mt-3 text-sm" style={{ color: '#9ca3af' }}>{edu.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default ExperienceSection;
-/* eslint-disable quotes, indent */

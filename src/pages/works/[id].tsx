@@ -1,19 +1,10 @@
 import { works } from '@/data/works';
 import AppLayout from '@/layouts/AppLayout';
 import { Work } from '@/types';
-import { GetServerSideProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import Slider, { Settings } from 'react-slick';
-
-const settings: Settings = {
-  dots: false,
-  infinite: false,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: false,
-  arrows: true,
-};
+import { FiArrowLeft, FiExternalLink, FiCheckCircle } from 'react-icons/fi';
 
 type Props = {
   work: Work & {
@@ -26,49 +17,164 @@ type Props = {
 
 const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
   return (
-    <AppLayout title="Work Detail">
-      <div className="container">
-        <div className="mt-24 flex flex-col items-center justify-center">
-          <h1 className="text-center text-2xl font-semibold sm:text-3xl md:text-4xl">{work.title}</h1>
+    <AppLayout title={work.title}>
+      <div className="container py-16">
+        {/* Back link */}
+        <Link href="/works">
+          <a
+            className="mb-10 inline-flex items-center gap-2 text-sm transition-colors duration-150"
+            style={{ color: '#6b7280', fontFamily: 'JetBrains Mono, monospace' }}
+            onMouseEnter={e => (e.currentTarget.style.color = '#00ff88')}
+            onMouseLeave={e => (e.currentTarget.style.color = '#6b7280')}
+          >
+            <FiArrowLeft size={14} /> Back to Projects
+          </a>
+        </Link>
+
+        {/* Header */}
+        <div className="mb-8">
+          <span
+            className="mb-3 inline-block rounded-full px-3 py-1 text-xs font-medium"
+            style={{
+              backgroundColor: 'rgba(0,255,136,0.08)',
+              border: '1px solid rgba(0,255,136,0.25)',
+              color: '#00ff88',
+              fontFamily: 'JetBrains Mono, monospace',
+            }}
+          >
+            {work.category}
+          </span>
+          <h1 className="text-3xl font-bold md:text-4xl" style={{ color: '#f9fafb' }}>
+            {work.title}
+          </h1>
+          {work.previewUrl && (
+            <a
+              href={work.previewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center gap-2 text-sm"
+              style={{ color: '#00ff88', fontFamily: 'JetBrains Mono, monospace' }}
+            >
+              <FiExternalLink size={14} /> View Live Site
+            </a>
+          )}
         </div>
-        <div className="mt-10">
-          <Slider {...settings}>
+
+        {/* Images */}
+        {work.images && work.images.length > 0 && (
+          <div className="mb-12 space-y-4">
             {work.images.map((image, index) => (
-              <div className="overflow-hidden rounded-xl" key={index}>
-                <Image src={image} height={720} width={1280} layout="responsive" alt={work.title} />
+              <div
+                key={index}
+                className="overflow-hidden rounded-xl"
+                style={{ border: '1px solid #2a2a2a' }}
+              >
+                <Image
+                  src={image}
+                  height={720}
+                  width={1280}
+                  layout="responsive"
+                  alt={`${work.title} screenshot ${index + 1}`}
+                  className="w-full"
+                />
               </div>
             ))}
-          </Slider>
-          {/* <div className="mt-6 flex justify-center">
-            <Link href={work.previewUrl}>
-              <a className="btn">Live Preview</a>
-            </Link>
-          </div> */}
+          </div>
+        )}
+
+        {/* Content Grid */}
+        <div className="grid gap-8 lg:grid-cols-3">
+          {/* Left: Description + Features */}
+          <div className="space-y-10 lg:col-span-2">
+            {/* Description */}
+            <div>
+              <h2
+                className="mb-1 text-xs font-semibold uppercase tracking-widest"
+                style={{ color: '#00ff88', fontFamily: 'JetBrains Mono, monospace' }}
+              >
+                // Overview
+              </h2>
+              <div className="section-divider" />
+              <p className="leading-relaxed" style={{ color: '#9ca3af' }}>
+                {work.description?.trim()}
+              </p>
+            </div>
+
+            {/* Key Features */}
+            {work.featureList && work.featureList.length > 0 && (
+              <div>
+                <h2
+                  className="mb-1 text-xs font-semibold uppercase tracking-widest"
+                  style={{ color: '#00ff88', fontFamily: 'JetBrains Mono, monospace' }}
+                >
+                  // Key Features
+                </h2>
+                <div className="section-divider" />
+                <ul className="space-y-2">
+                  {work.featureList.map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3 text-sm" style={{ color: '#9ca3af' }}>
+                      <FiCheckCircle size={15} className="mt-0.5 shrink-0" style={{ color: '#00ff88' }} />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Right: Tech Stack */}
+          <div>
+            {work.techUsed && work.techUsed.length > 0 && (
+              <div
+                className="rounded-xl p-6"
+                style={{ backgroundColor: '#111', border: '1px solid #2a2a2a', position: 'sticky', top: '90px' }}
+              >
+                <h2
+                  className="mb-1 text-xs font-semibold uppercase tracking-widest"
+                  style={{ color: '#00ff88', fontFamily: 'JetBrains Mono, monospace' }}
+                >
+                  // Tech Stack
+                </h2>
+                <div className="section-divider" />
+                <ul className="space-y-3">
+                  {work.techUsed.map((tech, index) => {
+                    const parts = tech.split(' —');
+                    const name = parts[0].trim();
+                    const desc = parts[1]?.trim();
+                    return (
+                      <li key={index}>
+                        <span
+                          className="text-sm font-semibold"
+                          style={{ color: '#f9fafb', fontFamily: 'JetBrains Mono, monospace' }}
+                        >
+                          {name}
+                        </span>
+                        {desc && (
+                          <p className="mt-0.5 text-xs" style={{ color: '#6b7280' }}>{desc}</p>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
 
-        <div className="my-10">
-          <h3 className="text-xl font-semibold">Summary</h3>
-          <p className="mt-4">{work.description}</p>
-          <h3 className="mt-10 text-xl font-semibold">Technologies Used</h3>
-          <ul className="mt-4 list-disc pl-4">
-            {work?.techUsed?.map((feature, index) => (
-              <li key={index} dangerouslySetInnerHTML={{ __html: feature }}></li>
-            ))}
-          </ul>
-          <h3 className="mt-10 text-xl font-semibold">Key Features</h3>
-          <ul className="mt-4 list-disc pl-4">
-            {work?.featureList?.map((feature, index) => (
-              <li key={index} dangerouslySetInnerHTML={{ __html: feature }}></li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mb-10 flex h-48 flex-col items-center justify-center">
-          <h2 className="text-4xl font-semibold">Want to Build a project like this?</h2>
-          <p className="mt-4">I can design and develop beautiful websites, apps for you</p>
-          <Link href="/contact">
-            <a className="mt-5 rounded-full bg-primary-500 px-8 py-2 font-semibold tracking-wide text-white hover:bg-primary-600 focus:ring-2 focus:ring-primary-200">
-              Contact Me
+        {/* CTA */}
+        <div
+          className="mt-20 rounded-xl p-10 text-center"
+          style={{ backgroundColor: '#111', border: '1px solid rgba(0,255,136,0.15)' }}
+        >
+          <h2 className="text-2xl font-bold" style={{ color: '#f9fafb' }}>
+            Interested in working together?
+          </h2>
+          <p className="mt-2 text-sm" style={{ color: '#6b7280' }}>
+            I&apos;m open to new opportunities. Let&apos;s build something great.
+          </p>
+          <Link href="/#contact">
+            <a className="btn-primary mt-6 inline-flex">
+              Get in touch →
             </a>
           </Link>
         </div>
@@ -77,18 +183,18 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const id = context.params?.id as string;
-  const work = works.find((work) => work.id === Number(id));
-  if (work) {
-    return {
-      props: {
-        work,
-      },
-    };
-  }
-  return {
-    notFound: true,
-  };
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = works
+    .filter((w) => w.id !== undefined)
+    .map((w) => ({ params: { id: String(w.id) } }));
+  return { paths, fallback: false };
 };
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const id = context.params?.id as string;
+  const work = works.find((w) => w.id === Number(id));
+  if (!work) return { notFound: true };
+  return { props: { work } };
+};
+
 export default WorkDetail;

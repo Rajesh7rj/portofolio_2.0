@@ -1,244 +1,151 @@
 import { Work } from '@/types';
-/* eslint-disable quotes, indent */
 
 export const works: Work[] = [
   {
     id: 1,
-    title: 'Tuto.ph (Admin Panel)',
+    title: 'Tuto.ph — HRMS Admin Panel',
     category: 'HRMS',
     thumbnailUrl: '/images/projects/tubo-2.png',
-    description: `
-    Tubo.ph is a user-friendly HRMS platform designed for manpower agencies to simplify employee management and timekeeping. 
-    It replaces outdated biometric systems with a modern app available on iOS and Android, offering features like attendance 
-    tracking, payroll management, and role-based access.
-
-    With Tubo, companies can manage multiple agencies, assign roles, schedule shifts, and track employee activities in real-time. 
-    The platform also includes an e-wallet for seamless transactions like salary payments, bill payments, and top-ups.`,
+    description: `Tubo.ph is a modern HRMS platform for manpower agencies, replacing legacy biometric systems with a cross-platform app (iOS & Android). It handles attendance, payroll, e-wallet transactions, and multi-agency role management — all from a single dashboard.`,
     publishedAt: '',
     images: ['/images/projects/tubo-1.png'],
     previewUrl: '',
     techUsed: [
-      "Next.js 14.2: Leveraging its latest features such as app routing, and image optimization for exceptional speed and SEO.",
-      "TypeScript: Ensuring type safety, maintainable code, and robust application development.",
-      "Zustand: Providing a simple, scalable, and lightweight state management solution for efficient application performance.",
-      "Radix UI: Offering accessible and unstyled components for creating high-quality, customizable user interfaces.",
-      "Tailwind CSS: Utilizing a utility-first approach to design, enabling fast and responsive UI development.",
-      "Authsignal: Integrating advanced authentication solutions to ensure secure and seamless user login experiences.",
-      "GitLab: Providing a powerful platform for version control, CI/CD pipelines, and collaborative development workflows."
-    ],    
+      "Next.js 14.2 — App router, image optimization, exceptional speed and SEO.",
+      "TypeScript — Type safety and maintainable codebase.",
+      "Zustand — Lightweight, scalable state management.",
+      "Radix UI — Accessible, unstyled component primitives.",
+      "Tailwind CSS — Utility-first, fully responsive UI.",
+      "Authsignal — Secure, seamless authentication flows.",
+      "GitLab — Version control, CI/CD pipelines.",
+    ],
     featureList: [
-      "Designed and built for Manpower Agencies",
-      "Manage all employees under a company or agency",
-      "Add, edit, or remove employees",
-      "Assign roles and responsibilities to users",
-      "Register and manage device enrollment for check-in/check-out",
-      "Set attendance schedules for individual employees",
-      "Allocate leave and manage employee leave requests",
-      "Track lateness, absences, and overtime",
-      "Consolidate time logs across various clients",
-      "Multiple user roles: Super Admin, Admin, HR, Employee, External User",
-      "E-Wallet roles: Maker, Checker, Approver, Wallet Admin",
-      "Role-based dashboard views and permissions",
-      "Top-up wallets and manage balances",
-      "Pay bills, buy loads, pay salaries, and government dues",
-      "Maker role to create requests",
-      "Checker role to verify requests",
-      "Approver role to approve transactions",
-      "Transaction history and approved request logs",
-      "Notifications for payment status",
-      "Dedicated payroll section for managing employee salaries",
-      "Automatic notification of payment statuses to employees",
-      "Streamlined salary disbursement through the e-wallet",
-      "Centralized dashboard with common info and analytics",
-      "Total counts of approved, created, and checked requests",
-      "Notifications for payments, employee activities, and updates",
-      "Support for registering companies and agencies under a company",
-      "Create, manage, and assign agencies under registered companies",
-      "Assign departments and locations to companies",
-      "Create custom schedule templates",
-      "Assign schedules to employees individually",
-      "Manage and adjust schedules based on company needs",
-      "Secure transaction management",
-      "Role-based access for critical operations",
-      "Detailed logs for compliance and audit purposes"
+      "Multi-agency hierarchy: Super Admin, Admin, HR, Employee, External User",
+      "Role-based dashboard views and granular permissions",
+      "Real-time attendance tracking, shift scheduling, and leave management",
+      "E-Wallet system: top-up, salary disbursement, bill payments, load purchases",
+      "Maker / Checker / Approver transaction workflow",
+      "Payroll management with automatic payment notifications",
+      "Audit logs and transaction history for compliance",
+      "Centralized analytics dashboard",
     ]
   },
   {
     id: 2,
-    title: 'Stonewels and Admin panel (CMS)',
-    category: 'E-Com Website & CMS panel',
+    title: 'Stonewels — E-Commerce & CMS',
+    category: 'E-Commerce & CMS',
     thumbnailUrl: '/images/projects/stonewels.png',
-    description: `
-    Developed a sleek e-commerce website for Stonewels using Next.js (TypeScript), showcasing a variety of jewelry 
-    products like Rings, Earrings, Necklaces, and Custom Jewelry. The site includes features such as a wishlist, 
-    custom design requests, a blog for jewelry tips, a ring size guide, and a contact form. Additionally, an Admin Panel 
-    (similar to a CMS) was created for easy content and products management of products, customer inquiries, custom requests, 
-    and blog content, ensuring a smooth and engaging user experience.
-    `,
+    description: `Full-stack e-commerce website for Stonewels jewelry brand, with a corresponding Admin CMS Panel. Customers can browse rings, earrings, necklaces, request custom pieces, and use a ring size guide. The admin panel manages products, blog content, custom requests, and customer inquiries.`,
     publishedAt: '',
     images: ["/images/projects/stonewels.png", "/images/projects/stonewels-admin-lp.png"],
     previewUrl: '',
     techUsed: [
-      "Next.js 14.2: Leveraging its latest features such as app routing, and image optimization for exceptional speed and SEO.",
-      "TypeScript: Ensuring type safety, maintainable code, and robust application development.",
-      "Material UI: For creating a modern, responsive, and visually appealing user interface.",
-      "EmailJS: Facilitating seamless and user-friendly form submissions for the 'Contact Us' page.",
-      "Redux Toolkit: A powerful and efficient solution for managing and centralizing application state.",
-      "React Slick: A responsive carousel component for creating sleek and interactive sliders."
-    ],    
-      featureList: [
-        "E-commerce website developed using Next.js (TypeScript) for Stonewels.",
-        "Showcases a variety of jewelry products including Rings, Earrings, Necklaces, and Custom Jewelry.",
-        "Wishlist feature for users to save favorite products.",
-        "Custom design requests for personalized jewelry.",
-        "Integrated blog section for jewelry tips and insights.",
-        "Ring size guide to help users find their perfect fit.",
-        "Contact form for customer inquiries and communication.",
-        "Admin Panel (CMS) for managing content, products, customer inquiries, custom requests, and blog posts.",
-        "Focus on delivering a smooth and engaging user experience."
-      ],
+      "Next.js 14.2 — SSG/SSR for fast, SEO-friendly pages.",
+      "TypeScript — Robust and maintainable code.",
+      "Material UI — Modern, responsive interface.",
+      "Redux Toolkit — Centralized state for cart and wishlist.",
+      "EmailJS — Contact and inquiry form submissions.",
+      "React Slick — Interactive product sliders.",
+    ],
+    featureList: [
+      "Full product catalog: Rings, Earrings, Necklaces, Custom Jewelry",
+      "Wishlist and custom design request features",
+      "Integrated blog with jewelry tips and guides",
+      "Ring size guide tool",
+      "Admin CMS Panel: manage products, inquiries, custom requests, blog posts",
+    ],
   },
   {
     id: 3,
-    title: 'Immencer Admin Panel (HRMS)',
+    title: 'Immencer — Employee Management System',
     category: 'HRMS',
     thumbnailUrl: '/images/projects/immencer.png',
-    description: `
-   Developed Immencer, an employee management system with admin and employee panels. The admin panel
-    handles HR tasks like employee management, asset allocation, attendance tracking, leave management, and policy 
-    dissemination. The employee panel provides access to personal details, attendance records, leave requests, and training resources. Used React.js, 
-    TypeScript, and Material-UI for a seamless, responsive UI/UX. Integrated APIs for efficient data exchange and ensured
-     project success by meeting deadlines and maintaining code quality. `,
+    description: `Immencer is a dual-panel HRMS: an admin panel for HR operations (employee management, asset allocation, attendance, leave, policy hub) and an employee-facing panel for self-service access. Built with React.js, TypeScript, and Material UI for a seamless, responsive experience.`,
     publishedAt: '',
     images: ["/images/projects/immencer.png"],
     previewUrl: '',
     techUsed: [
-      "React 18.2: Leveraging the latest features and improvements for building dynamic, high-performance user interfaces.",
-      "TypeScript: Ensuring type safety, maintainable code, and robust application development.",
-      "Material UI: For creating a modern, responsive, and visually appealing user interface.",
-      "Redux Toolkit: A powerful and efficient solution for managing and centralizing application state.",
-      "React Slick: A responsive carousel component for creating sleek and interactive sliders.",
-      "React Text Editor Library: For integrating rich text editing functionality into applications.",
-      "React-Graffiti: A library for incorporating graffiti-like drawing features in React applications.",
-      "Date-fns: A modern JavaScript date utility library for parsing, formatting, and manipulating dates.",
-      "Moment: A library for parsing, validating, manipulating, and displaying dates and times."
+      "React 18.2 — High-performance UI with latest React features.",
+      "TypeScript — Type-safe, maintainable development.",
+      "Material UI — Consistent, responsive design system.",
+      "Redux Toolkit — Efficient global state management.",
+      "Date-fns / Moment — Date parsing, formatting, and manipulation.",
     ],
     featureList: [
-      "Developed Immencer, an employee management system with dedicated admin and employee panels.",
-      "Admin panel includes features for employee management, asset allocation, attendance tracking, leave management, and policy dissemination.",
-      "Employee panel provides access to personal details, attendance records, leave requests, and training resources.",
-      "Used React.js, TypeScript, and Material-UI to create a seamless, responsive UI/UX.",
-      "Integrated APIs for efficient data exchange between the admin and employee panels.",
-      "Ensured project success by meeting deadlines and maintaining code quality."
+      "Admin panel: employee management, asset allocation, attendance, leave, policy dissemination",
+      "Employee panel: personal details, attendance records, leave requests, training resources",
+      "API integration for real-time data exchange",
+      "Responsive UI/UX across all device sizes",
     ],
   },
   {
     id: 4,
-    title: 'Kohereza International (www.kohereza.com)',
-    category: 'Website',
+    title: 'Kohereza International — Corporate Website',
+    category: 'Corporate Website',
     thumbnailUrl: '/images/projects/kohereza.png',
-    description: `
-    Kohereza International, founded in 2019 in Surat, Gujarat, is an import-export leader specializing in premium products like Construction Chemicals, Jewelry, Organic Grains, and Indian Handcrafted Items.
-
-    \n\nWe built their multilingual website using Next.js 14.2 with features like dynamic language support, static site generation, SEO, and responsive design, delivering a fast, user-friendly experience showcasing Kohereza's commitment to quality and global outreach.
-    `,
+    description: `Multilingual corporate website for Kohereza International, an import-export company from Surat. Built with Next.js 14.2 with i18n support for 10 languages, SSG for blazing performance, and SEO optimization to drive global reach.`,
     publishedAt: '',
     images: ["/images/projects/kohereza.png"],
-    previewUrl: '',
-    techUsed:[
-      "Next.js 14.2: Leveraging its latest features such as app routing, static site generation, and image optimization for exceptional speed and SEO.",
-      "TypeScript: Ensuring type safety, maintainable code, and robust application development.",
-      "Material UI: For creating a modern, responsive, and visually appealing user interface.",
-      "i18n (Internationalization): Enabling multilingual support for 10 languages to serve a global audience.",
-      "EmailJS: Facilitating seamless and user-friendly form submissions for the 'Contact Us' page."
+    previewUrl: 'https://www.kohereza.com',
+    techUsed: [
+      "Next.js 14.2 — SSG, app routing, image optimization.",
+      "TypeScript — Type-safe, maintainable codebase.",
+      "Material UI — Modern, responsive interface.",
+      "i18n — Multilingual support for 10 languages.",
+      "EmailJS — Contact form submissions.",
     ],
-    featureList:[
-      "Multilingual Support: Dynamic content in 10 languages, auto-detected or user-selectable.",
-      "Static Site Generation (SSG): Ensures fast loading and high performance.",
-      "SEO Optimization: Improves search rankings and organic visibility.",
-      "Image Optimization: Faster load times with enhanced visual quality.",
-      "Responsive Design: Seamless experience across all devices.",
-      "App Routing: Simplified navigation with optimized routes.",
-      "Contact Us: Functional form powered by EmailJS.",
-      "Modern UI/UX: Clean design with Material UI for intuitive browsing.",
-      "Company Pages: Sections like 'About Us,' 'Contact us,' and 'Testimonials.'"
+    featureList: [
+      "Multilingual: 10 languages, auto-detected or user-selectable",
+      "Static Site Generation for maximum performance",
+      "SEO-optimized for global organic visibility",
+      "Responsive across all devices",
+      "EmailJS-powered contact form",
     ]
-    
   },
   {
     id: 5,
-    title: 'Azle - Omnichannel plateform',
-    category: 'Omnichannel plateform',
+    title: 'Azle — Omnichannel Support Platform',
+    category: 'SaaS Platform',
     thumbnailUrl: '/images/projects/azle.png',
-    description: `
-    Azle revolutionizes customer support by integrating multiple channels into one platform, enhancing responsiveness 
-    and workflow efficiency. Its intuitive admin panel, customization options, data-driven insights, and focus on security 
-    and scalability boost customer satisfaction. Contributed by developing an Internal Chat Module, implementing Scroll Pagination,
-     and integrating a Customer Merge Module. Used Redux for global state management, enhanced UI with form validation, 
-     and fixed bugs to improve user experience and platform functionality.
-   `,
+    description: `Azle unifies customer support across multiple channels into a single platform. Contributed by building an Internal Chat Module, implementing Scroll Pagination, and integrating a Customer Merge Module. Used Redux for global state, enhanced UI with form validation, and resolved critical production bugs.`,
     publishedAt: '',
     images: ["/images/projects/azle.png"],
     previewUrl: '',
     techUsed: [
-      "React 18.2: Leveraging the latest features and improvements for building dynamic, high-performance user interfaces.",
-      "TypeScript: Ensuring type safety, maintainable code, and robust application development.",
-      "Material UI: For creating a modern, responsive, and visually appealing user interface.",
-      "Redux Toolkit: A powerful and efficient solution for managing and centralizing application state.",
-      "React Slick: A responsive carousel component for creating sleek and interactive sliders.",
-      "React Text Editor Library: For integrating rich text editing functionality into applications.",
-      "React-Graffiti: A library for incorporating graffiti-like drawing features in React applications.",
-      "Date-fns: A modern JavaScript date utility library for parsing, formatting, and manipulating dates.",
-      "Moment: A library for parsing, validating, manipulating, and displaying dates and times."
+      "React 18.2 — Dynamic, high-performance UI.",
+      "TypeScript — Type safety across the platform.",
+      "Material UI — Consistent design language.",
+      "Redux Toolkit — Global state management.",
     ],
     featureList: [
-      "Developed Azle, a platform that revolutionizes customer support by integrating multiple channels into one system, enhancing responsiveness and workflow efficiency.",
-      "Intuitive admin panel with customization options for improving user and team experience.",
-      "Data-driven insights to boost customer satisfaction and streamline processes.",
-      "Focused on security and scalability to ensure a robust platform.",
-      "Contributed to the development of an Internal Chat Module for better team communication.",
-      "Implemented Scroll Pagination for a smoother user experience.",
-      "Integrated a Customer Merge Module for better data management.",
-      "Used Redux for global state management to maintain consistent app state.",
-      "Enhanced UI with form validation for more reliable user interactions.",
-    ],    
+      "Internal Chat Module for team communication",
+      "Scroll Pagination for smoother data loading",
+      "Customer Merge Module for unified profiles",
+      "Admin panel with data-driven insights and customization",
+      "Security-focused, scalable architecture",
+    ],
   },
   {
     id: 6,
-    title: 'Solid Black Chemicals',
-    category: 'Company Website',
+    title: 'Solid Black Chemicals — Company Website',
+    category: 'Corporate Website',
     thumbnailUrl: '/images/projects/sbc.png',
-    description: `
-    Developed a website for Solid Black Chemicals, an ISO 9001:2015 certified company based in Surat, Gujarat, 
-    specializing in manufacturing and supplying construction chemicals. The website features a comprehensive product listing, 
-    categorized for easy navigation, with detailed descriptions of products like concrete admixtures, waterproof coatings, tile 
-    adhesives, and more. Key features include multilingual support, SEO optimization, responsive design, and a career page for 
-    job inquiries. Built with modern UI/UX using Material UI and optimized for speed, the site ensures a seamless browsing 
-    experience across all devices.
-    `,
+    description: `Corporate website for Solid Black Chemicals, an ISO 9001:2015 certified construction chemicals manufacturer. Multilingual, SEO-optimized static site with a full product catalog, career inquiries, and responsive design built with Next.js and Material UI.`,
     publishedAt: '',
     images: ["/images/projects/sbc.png"],
     previewUrl: '',
-    techUsed:[
-      "Next.js 14.2: Leveraging its latest features such as app routing, static site generation, and image optimization for exceptional speed and SEO.",
-      "TypeScript: Ensuring type safety, maintainable code, and robust application development.",
-      "Material UI: For creating a modern, responsive, and visually appealing user interface.",
-      "EmailJS: Facilitating seamless and user-friendly form submissions for the 'Contact Us' page."
+    techUsed: [
+      "Next.js 14.2 — SSG, app routing, image optimization.",
+      "TypeScript — Robust development.",
+      "Material UI — Modern, responsive UI.",
+      "EmailJS — Contact and career inquiry forms.",
     ],
     featureList: [
-      "Static Site Generation (SSG): Ensures fast loading and high performance.",
-      "SEO Optimization: Improves search rankings and organic visibility.",
-      "Image Optimization: Faster load times with enhanced visual quality.",
-      "Responsive Design: Seamless experience across all devices.",
-      "App Routing: Simplified navigation with optimized routes.",
-      "Contact Us: Functional form powered by EmailJS.",
-      "Modern UI/UX: Clean design with Material UI for intuitive browsing.",
-      "Company Pages: Sections like 'About Us,' 'Contact us,' and 'Testimonials.'",
-      "Product Listing: Display a comprehensive range of products with detailed descriptions.",
-      "Product Categories: Organized sections to easily browse and filter products by type, features, or popularity."
+      "Comprehensive product catalog with categories and descriptions",
+      "Multilingual support for broader market reach",
+      "SEO-optimized for search visibility",
+      "Career page for job inquiries",
+      "Responsive design across all devices",
     ]
   },
-  {}
 ];
-
-/* eslint-disable quotes, indent */

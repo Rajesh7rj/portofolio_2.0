@@ -1,100 +1,169 @@
-import Image from 'next/image';
-import React, { useState } from 'react';
-import Button from '@/components/form/Button';
-import Input from '@/components/form/Input';
-import TextArea from '@/components/form/Textarea';
-import SectionTitle from '@/components/shared/SectionTitle';
+import React, { useRef, useState } from 'react';
+import { FiMail, FiMapPin, FiPhone, FiSend } from 'react-icons/fi';
+import emailjs from '@emailjs/browser';
+
+// ─── EmailJS Configuration ─────────────────────────────────────────────────
+// Create a free account at https://emailjs.com and fill in your credentials:
+const EMAILJS_SERVICE_ID  = 'service_vags50t';
+const EMAILJS_TEMPLATE_ID = 'template_24d5uiu';
+const EMAILJS_PUBLIC_KEY  = 'ThqedR6XlwBs8iyYb';
+// ───────────────────────────────────────────────────────────────────────────
+
+const contactInfo = [
+  { icon: <FiMail size={20} />, label: 'Email', value: 'rajeshjanyani7@gmail.com', href: 'mailto:rajeshjanyani7@gmail.com' },
+  { icon: <FiPhone size={20} />, label: 'Phone', value: '+91 97241 67245', href: 'tel:+919724167245' },
+  { icon: <FiMapPin size={20} />, label: 'Location', value: 'Vadodara, Gujarat, India', href: undefined },
+];
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value
-    }));
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+    setStatus('sending');
+
+    try {
+      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current, EMAILJS_PUBLIC_KEY);
+      setStatus('success');
+      formRef.current.reset();
+    } catch {
+      setStatus('error');
+    }
   };
 
-  const openGmail = () => {
-    const { name, email, subject, message } = formData;
-  
-    // Check if all fields are filled
-    if (!name || !email || !subject || !message) {
-      alert('Please fill out all fields.');
-      return;
-    }
-  
-    // Simple email validation regex
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(email)) {
-      alert('Please enter a valid email address.');
-      return;
-    }
-  
-    // Construct the mailto link
-    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=rajeshjanyani7@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}%0A%0A--%0A%0A${encodeURIComponent(name)}`;
-    window.open(mailtoLink, '_blank');
+  const inputStyle: React.CSSProperties = {
+    width: '100%',
+    backgroundColor: '#1a1a1a',
+    border: '1px solid #2a2a2a',
+    borderRadius: '0.5rem',
+    padding: '0.75rem 1rem',
+    color: '#f9fafb',
+    fontSize: '0.875rem',
+    outline: 'none',
+    transition: 'border-color 0.2s',
+    fontFamily: 'Rubik, sans-serif',
   };
 
   return (
-    <>
-      <SectionTitle>Get In Touch</SectionTitle>
-      <div className="mt-14 grid gap-6 md:grid-cols-3">
-        <div className="relative h-48">
-          <Image src="/images/map.svg" layout="fill" className="dark:invert" alt="map" />
-          <h6 className="text-2xl font-bold">Let's talk about everything!</h6>
-          <p className="mt-2">Don't like forms? Send me an email. 👋</p>
+    <div id="contact" className="py-24">
+      <p className="section-label">06. Contact</p>
+      <h2 className="section-title">Get In Touch</h2>
+      <div className="section-divider" />
+      <p className="mb-10 text-sm max-w-lg" style={{ color: '#6b7280' }}>
+        I&apos;m currently open to new opportunities. Whether you have a question, a project in mind, or just want to say hi — my inbox is always open.
+      </p>
+
+      <div className="grid gap-10 lg:grid-cols-5">
+        {/* Contact Info */}
+        <div className="flex flex-col gap-4 lg:col-span-2">
+          {contactInfo.map(({ icon, label, value, href }) => (
+            <div
+              key={label}
+              className="flex items-center gap-4 rounded-xl p-5"
+              style={{ backgroundColor: '#111', border: '1px solid #2a2a2a' }}
+            >
+              <div
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
+                style={{ backgroundColor: 'rgba(0,255,136,0.08)', color: '#00ff88' }}
+              >
+                {icon}
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-widest" style={{ color: '#555', fontFamily: 'JetBrains Mono, monospace' }}>{label}</p>
+                {href ? (
+                  <a href={href} className="text-sm font-medium" style={{ color: '#d1d5db' }}
+                    onMouseEnter={e => e.currentTarget.style.color = '#00ff88'}
+                    onMouseLeave={e => e.currentTarget.style.color = '#d1d5db'}
+                  >{value}</a>
+                ) : (
+                  <p className="text-sm font-medium" style={{ color: '#d1d5db' }}>{value}</p>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="col-span-2">
-          <div className="grid gap-8 md:grid-cols-2">
-            <Input
-              name="name"
-              value={formData.name}
-              onChange={handleInputChange}
-              placeholder="Your Name"
+
+        {/* Form */}
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-5 rounded-xl p-6 lg:col-span-3"
+          style={{ backgroundColor: '#111', border: '1px solid #2a2a2a' }}
+        >
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label className="mb-1.5 block text-xs uppercase tracking-wider" style={{ color: '#6b7280', fontFamily: 'JetBrains Mono, monospace' }}>Name</label>
+              <input
+                name="user_name"
+                required
+                placeholder="Your name"
+                style={inputStyle}
+                onFocus={e => e.target.style.borderColor = 'rgba(0,255,136,0.4)'}
+                onBlur={e => e.target.style.borderColor = '#2a2a2a'}
+              />
+            </div>
+            <div>
+              <label className="mb-1.5 block text-xs uppercase tracking-wider" style={{ color: '#6b7280', fontFamily: 'JetBrains Mono, monospace' }}>Email</label>
+              <input
+                name="user_email"
+                type="email"
+                required
+                placeholder="your@email.com"
+                style={inputStyle}
+                onFocus={e => e.target.style.borderColor = 'rgba(0,255,136,0.4)'}
+                onBlur={e => e.target.style.borderColor = '#2a2a2a'}
+              />
+            </div>
+          </div>
+          <div>
+            <label className="mb-1.5 block text-xs uppercase tracking-wider" style={{ color: '#6b7280', fontFamily: 'JetBrains Mono, monospace' }}>Subject</label>
+            <input
+              name="subject"
+              required
+              placeholder="What's this about?"
+              style={inputStyle}
+              onFocus={e => e.target.style.borderColor = 'rgba(0,255,136,0.4)'}
+              onBlur={e => e.target.style.borderColor = '#2a2a2a'}
             />
-            <Input
-              name="email"
-              type="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              placeholder="Email Address"
+          </div>
+          <div>
+            <label className="mb-1.5 block text-xs uppercase tracking-wider" style={{ color: '#6b7280', fontFamily: 'JetBrains Mono, monospace' }}>Message</label>
+            <textarea
+              name="message"
+              required
+              rows={5}
+              placeholder="Tell me about your project or opportunity..."
+              style={{ ...inputStyle, resize: 'vertical' }}
+              onFocus={e => e.target.style.borderColor = 'rgba(0,255,136,0.4)'}
+              onBlur={e => e.target.style.borderColor = '#2a2a2a'}
             />
           </div>
 
-          <div className="mt-8">
-            <Input
-              name="subject"
-              value={formData.subject}
-              onChange={handleInputChange}
-              placeholder="Subject"
-            />
-          </div>
-          <div className="mt-8">
-            <TextArea
-              name="message"
-              value={formData.message}
-              onChange={handleInputChange}
-              placeholder="Message"
-            />
-          </div>
-          <div className="mt-8">
-            <Button
-              onClick={openGmail}  // Trigger openGmail function when button is clicked
-              className="mt-5 bg-primary-500 px-8 font-semibold text-white hover:bg-primary-600 focus:ring-2 focus:ring-primary-200"
-            >
-              Send Message
-            </Button>
-          </div>
-        </div>
+          <button
+            type="submit"
+            disabled={status === 'sending'}
+            className="btn-primary w-full justify-center"
+            style={{ opacity: status === 'sending' ? 0.7 : 1 }}
+          >
+            <FiSend size={14} />
+            {status === 'sending' ? 'Sending...' : 'Send Message'}
+          </button>
+
+          {status === 'success' && (
+            <p className="text-center text-sm" style={{ color: '#00ff88' }}>
+              ✓ Message sent! I&apos;ll get back to you soon.
+            </p>
+          )}
+          {status === 'error' && (
+            <p className="text-center text-sm" style={{ color: '#f87171' }}>
+              Failed to send. Please email me directly at rajeshjanyani7@gmail.com
+            </p>
+          )}
+        </form>
       </div>
-    </>
+    </div>
   );
 };
 

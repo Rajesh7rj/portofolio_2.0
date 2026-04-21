@@ -1,22 +1,14 @@
-/* eslint-disable quotes, indent */
 export const personalInfo = {
-    name: 'Rajesh Janyani',
-    title: 'Rajesh J',
-    developer: ['Frontend Developer', 'React JS Developer', 'Next JS Developer'],
-    mobile: '+919724167245',
-    email: 'rajeshjanyani7@gmail.com',
-    address: 'Baroda, Gujarat, India',
-    totalProjectsDone: '7+',
-    totalExperience: '2+',
-    employeeOfTheYear:"EOTY",
-    generateAboutMe() {
-        return `
-        Senior Software Developer delivering scalable React.js and Next.js applications. Experienced in
-        leading Agile teams, mentoring developers, and managing cross-functional collaboration. Proven ability to optimize
-        performance, build reusable component libraries, and drive product innovation aligned with business goals.
-        `;
-    }
+  name: 'Rajesh Janyani',
+  title: 'Rajesh Janyani',
+  developer: ['Frontend Developer', 'React.js Developer', 'Next.js Developer', 'Frontend Engineer'],
+  mobile: '+91 97241 67245',
+  email: 'rajeshjanyani7@gmail.com',
+  address: 'Vadodara (Baroda), Gujarat, India',
+  totalProjectsDone: '7+',
+  totalExperience: '3+',
+  employeeOfTheYear: 'Employee of the Year',
+  generateAboutMe() {
+    return `Senior Software Developer with 3+ years building scalable, high-performance React.js and Next.js applications. Experienced in leading Agile teams, mentoring developers, and driving product innovation aligned with business goals. Passionate about clean architecture, reusable component systems, and delivering real user impact.`;
+  }
 };
-
-
-/* eslint-disable quotes, indent */

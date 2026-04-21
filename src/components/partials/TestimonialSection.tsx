@@ -1,45 +1,64 @@
+import React from 'react';
 import { reviews } from '@/data/reviews';
 import Image from 'next/image';
-import React from 'react';
-import Slider, { Settings } from 'react-slick';
-import SectionTitle from '../shared/SectionTitle';
+import { FiMessageSquare } from 'react-icons/fi';
 
-const reviewSettings: Settings = {
-  dots: true,
-  infinite: true,
-  speed: 1000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  arrows: false,
-};
-const Testimonial = () => {
+const TestimonialSection = () => {
   return (
-    <>
-      <SectionTitle>Testimonials</SectionTitle>
-      <div className="mt-16">
-        <Slider {...reviewSettings}>
-          {reviews.map((review, index) => (
-            <div className="mb-6" key={index}>
-              <div className="flex flex-col items-center">
-                <div className="h-24 w-24 rounded-full">
-                  <Image src={review.author.imageUrl} height={100} width={100} alt={review.author.name}  className="rounded-full"/>
-                </div>
-                <h6 className="mt-3 text-lg font-semibold">{review.author.name}</h6>
-                <p className="text-sm text-gray-400 dark:text-gray-200">
-                  {review.author.designation} 
-                  {/* at {review.author.company}. */}
-                </p>
-                <div className="mt-6 max-w-[900px] rounded-2xl bg-white p-8 text-gray-500 shadow-lg dark:bg-gray-800 dark:text-gray-200 mx-2">
-                  {review.comment}
-                </div>
+    <div id="testimonials" className="py-24">
+      <p className="section-label">05. Testimonials</p>
+      <h2 className="section-title">What People Say</h2>
+      <div className="section-divider" />
+
+      <div className="mt-8 grid gap-6 md:grid-cols-2">
+        {reviews.map((review, index) => (
+          <div
+            key={index}
+            className="dark-card flex flex-col gap-5 p-7"
+          >
+            {/* Quote Icon */}
+            <FiMessageSquare size={24} style={{ color: '#00ff88', opacity: 0.6 }} />
+
+            {/* Comment */}
+            <p
+              className="text-sm leading-relaxed"
+              style={{ color: '#9ca3af' }}
+            >
+              &ldquo;{review.comment.trim()}&rdquo;
+            </p>
+
+            {/* Author */}
+            <div className="mt-auto flex items-center gap-4 border-t pt-5" style={{ borderColor: '#2a2a2a' }}>
+              <div
+                className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full"
+                style={{ border: '2px solid rgba(0,255,136,0.3)' }}
+              >
+                {review.author.imageUrl ? (
+                  <Image
+                    src={review.author.imageUrl}
+                    layout="fill"
+                    objectFit="cover"
+                    alt={review.author.name}
+                  />
+                ) : (
+                  <div
+                    className="flex h-full w-full items-center justify-center text-sm font-bold"
+                    style={{ backgroundColor: '#1a1a1a', color: '#00ff88' }}
+                  >
+                    {review.author.name.charAt(0)}
+                  </div>
+                )}
+              </div>
+              <div>
+                <p className="font-semibold" style={{ color: '#f9fafb' }}>{review.author.name}</p>
+                <p className="text-xs" style={{ color: '#6b7280' }}>{review.author.designation}</p>
               </div>
             </div>
-          ))}
-        </Slider>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 
-export default Testimonial;
+export default TestimonialSection;

@@ -1,400 +1,70 @@
-import { Post } from '@/types';
+// ─── Blog Posts ──────────────────────────────────────────────────────────────
+// Each entry links directly to Medium (or any external blog URL).
+// To add a new post, just add a new object here.
 
-export const posts: Post[] = [
+export interface BlogPost {
+  id: number;
+  title: string;
+  summary: string;
+  tag: string;
+  publishedAt: string;
+  readTime: string;
+  mediumUrl: string;
+}
+
+export const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: 'Lorem ipsum dolor sit amet',
-    publishedAt: '7 April 2022',
-    thumbnailUrl: '/images/posts/post-thumbnail-1.png',
-    imageUrl: '/images/posts/post-01.png',
-    authorName: 'John Doe',
-    content: `
-    <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet Cras id dui. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis.
-              Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis eu pede mollis pretium.
-              Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu, semper a, adipiscing
-              nec
-            </p>
-            <blockquote>
-              A rich text element can be used with static or dynamic content For static content, just drop it into any
-              page
-            </blockquote>
-            <p>
-              Praesent ac sem eget est egestas volutpat. Aenean tellus metus, bibendum sed, posuere ac, mattis non,
-              nunc. Curabitur suscipit suscipit tellus. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-              lorem. Etiam rhoncus.Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Pellentesque egestas,
-              neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Vestibulum
-              purus quam, scelerisque ut, mollis sed, nonummy id, metus Vestibulum ullamcorper mauris at ligula.
-              Phasellus consectetuer vestibulum elit. Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut
-              nisi.Cum sociis natoque penatibus Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
-              blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
-            </p>`,
+    title: 'How I Reduced API Redundancy by 30% Using React Query',
+    summary: 'A practical walkthrough of migrating from manual fetch logic to React Query — eliminating duplicate calls, improving caching, and making the codebase far more maintainable.',
+    tag: 'Performance',
+    publishedAt: 'Mar 2025',
+    readTime: '5 min read',
+    mediumUrl: 'https://medium.com/@rajesh-janyani',
   },
   {
     id: 2,
-    title: 'Dolorem eum magni eos aperiam',
-    publishedAt: '9 Mar 2022',
-    thumbnailUrl: '/images/posts/post-thumbnail-2.png',
-    imageUrl: '/images/posts/post-02.png',
-    authorName: 'John Doe',
-    content: `
-    <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet Cras id dui. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis.
-              Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis eu pede mollis pretium.
-              Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu, semper a, adipiscing
-              nec
-            </p>
-            <blockquote>
-              A rich text element can be used with static or dynamic content For static content, just drop it into any
-              page
-            </blockquote>
-            <p>
-              Praesent ac sem eget est egestas volutpat. Aenean tellus metus, bibendum sed, posuere ac, mattis non,
-              nunc. Curabitur suscipit suscipit tellus. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-              lorem. Etiam rhoncus.Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Pellentesque egestas,
-              neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Vestibulum
-              purus quam, scelerisque ut, mollis sed, nonummy id, metus Vestibulum ullamcorper mauris at ligula.
-              Phasellus consectetuer vestibulum elit. Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut
-              nisi.Cum sociis natoque penatibus Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
-              blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
-            </p>`,
+    title: 'Why I Always Reach for Zustand Over Redux (and When I Don\'t)',
+    summary: 'Redux Toolkit is powerful but brings weight. Zustand is minimal but has limits. Here\'s my decision framework after using both in production HRMS and eCommerce systems.',
+    tag: 'Architecture',
+    publishedAt: 'Jan 2025',
+    readTime: '6 min read',
+    mediumUrl: 'https://medium.com/@rajesh-janyani',
   },
   {
     id: 3,
-    title: 'Magnam facilis autem',
-    publishedAt: '15 Feb 2022',
-    thumbnailUrl: '/images/posts/post-thumbnail-3.png',
-    imageUrl: '/images/posts/post-03.png',
-    authorName: 'John Doe',
-    content: `
-    <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet Cras id dui. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis.
-              Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis eu pede mollis pretium.
-              Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu, semper a, adipiscing
-              nec
-            </p>
-            <blockquote>
-              A rich text element can be used with static or dynamic content For static content, just drop it into any
-              page
-            </blockquote>
-            <p>
-              Praesent ac sem eget est egestas volutpat. Aenean tellus metus, bibendum sed, posuere ac, mattis non,
-              nunc. Curabitur suscipit suscipit tellus. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-              lorem. Etiam rhoncus.Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Pellentesque egestas,
-              neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Vestibulum
-              purus quam, scelerisque ut, mollis sed, nonummy id, metus Vestibulum ullamcorper mauris at ligula.
-              Phasellus consectetuer vestibulum elit. Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut
-              nisi.Cum sociis natoque penatibus Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
-              blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
-            </p>`,
+    title: 'Building a Reusable Component Library That Your Team Will Actually Use',
+    summary: 'Lessons from building component systems used across 40+ modules. How to design for discoverability, document properly, and avoid the trap of over-abstraction.',
+    tag: 'Components',
+    publishedAt: 'Nov 2024',
+    readTime: '7 min read',
+    mediumUrl: 'https://medium.com/@rajesh-janyani',
   },
   {
     id: 4,
-    title: 'Dolorem dolore est ipsam',
-    publishedAt: '10 Jan 2022',
-    thumbnailUrl: '/images/posts/post-thumbnail-4.png',
-    imageUrl: '/images/posts/post-04.png',
-    authorName: 'John Doe',
-    content: `
-    <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet Cras id dui. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis.
-              Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis eu pede mollis pretium.
-              Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu, semper a, adipiscing
-              nec
-            </p>
-            <blockquote>
-              A rich text element can be used with static or dynamic content For static content, just drop it into any
-              page
-            </blockquote>
-            <p>
-              Praesent ac sem eget est egestas volutpat. Aenean tellus metus, bibendum sed, posuere ac, mattis non,
-              nunc. Curabitur suscipit suscipit tellus. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-              lorem. Etiam rhoncus.Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Pellentesque egestas,
-              neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Vestibulum
-              purus quam, scelerisque ut, mollis sed, nonummy id, metus Vestibulum ullamcorper mauris at ligula.
-              Phasellus consectetuer vestibulum elit. Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut
-              nisi.Cum sociis natoque penatibus Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
-              blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
-            </p>`,
+    title: 'Next.js 14 App Router — What Actually Changed for Production Apps',
+    summary: 'Moving past the hype: real differences you\'ll encounter migrating a large codebase to the App Router. Server Components, caching gotchas, and layout patterns that work.',
+    tag: 'Next.js',
+    publishedAt: 'Sep 2024',
+    readTime: '8 min read',
+    mediumUrl: 'https://medium.com/@rajesh-janyani',
   },
   {
     id: 5,
-    title: 'Nesciunt iure omnis dolorem tempora et accusantium',
-    publishedAt: '01 Jan 2022',
-    thumbnailUrl: '/images/posts/post-thumbnail-5.png',
-    imageUrl: '/images/posts/post-05.png',
-    authorName: 'John Doe',
-    content: `
-    <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet Cras id dui. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis.
-              Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis eu pede mollis pretium.
-              Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu, semper a, adipiscing
-              nec
-            </p>
-            <blockquote>
-              A rich text element can be used with static or dynamic content For static content, just drop it into any
-              page
-            </blockquote>
-            <p>
-              Praesent ac sem eget est egestas volutpat. Aenean tellus metus, bibendum sed, posuere ac, mattis non,
-              nunc. Curabitur suscipit suscipit tellus. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-              lorem. Etiam rhoncus.Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Pellentesque egestas,
-              neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Vestibulum
-              purus quam, scelerisque ut, mollis sed, nonummy id, metus Vestibulum ullamcorper mauris at ligula.
-              Phasellus consectetuer vestibulum elit. Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut
-              nisi.Cum sociis natoque penatibus Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
-              blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
-            </p>`,
+    title: 'TypeScript Migration Without Losing Your Mind',
+    summary: 'A battle-tested, incremental approach to migrating a large React.js codebase to TypeScript — without stopping feature development or breaking everything at once.',
+    tag: 'TypeScript',
+    publishedAt: 'Jul 2024',
+    readTime: '6 min read',
+    mediumUrl: 'https://medium.com/@rajesh-janyani',
   },
   {
     id: 6,
-    title: 'Optio molestias id quia eum',
-    publishedAt: '28 Dec 2021',
-    thumbnailUrl: '/images/posts/post-thumbnail-6.png',
-    imageUrl: '/images/posts/post-06.png',
-    authorName: 'John Doe',
-    content: `
-    <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet Cras id dui. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis.
-              Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis eu pede mollis pretium.
-              Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu, semper a, adipiscing
-              nec
-            </p>
-            <blockquote>
-              A rich text element can be used with static or dynamic content For static content, just drop it into any
-              page
-            </blockquote>
-            <p>
-              Praesent ac sem eget est egestas volutpat. Aenean tellus metus, bibendum sed, posuere ac, mattis non,
-              nunc. Curabitur suscipit suscipit tellus. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-              lorem. Etiam rhoncus.Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Pellentesque egestas,
-              neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Vestibulum
-              purus quam, scelerisque ut, mollis sed, nonummy id, metus Vestibulum ullamcorper mauris at ligula.
-              Phasellus consectetuer vestibulum elit. Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut
-              nisi.Cum sociis natoque penatibus Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
-              blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
-            </p>`,
-  },
-  {
-    id: 7,
-    title: 'Eius et ipsum occaecati dicta aut quaerat',
-    publishedAt: '21 Dec 2021',
-    thumbnailUrl: '/images/posts/post-thumbnail-1.png',
-    imageUrl: '/images/posts/post-01.png',
-    authorName: 'John Doe',
-    content: `
-    <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet Cras id dui. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis.
-              Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis eu pede mollis pretium.
-              Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu, semper a, adipiscing
-              nec
-            </p>
-            <blockquote>
-              A rich text element can be used with static or dynamic content For static content, just drop it into any
-              page
-            </blockquote>
-            <p>
-              Praesent ac sem eget est egestas volutpat. Aenean tellus metus, bibendum sed, posuere ac, mattis non,
-              nunc. Curabitur suscipit suscipit tellus. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-              lorem. Etiam rhoncus.Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Pellentesque egestas,
-              neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Vestibulum
-              purus quam, scelerisque ut, mollis sed, nonummy id, metus Vestibulum ullamcorper mauris at ligula.
-              Phasellus consectetuer vestibulum elit. Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut
-              nisi.Cum sociis natoque penatibus Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
-              blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
-            </p>`,
-  },
-  {
-    id: 8,
-    title: 'Dolorum ut in voluptas mollitia et saepe quo animi',
-    publishedAt: '20 Dec 2021',
-    thumbnailUrl: '/images/posts/post-thumbnail-2.png',
-    imageUrl: '/images/posts/post-02.png',
-    authorName: 'John Doe',
-    content: `
-    <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet Cras id dui. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis.
-              Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis eu pede mollis pretium.
-              Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu, semper a, adipiscing
-              nec
-            </p>
-            <blockquote>
-              A rich text element can be used with static or dynamic content For static content, just drop it into any
-              page
-            </blockquote>
-            <p>
-              Praesent ac sem eget est egestas volutpat. Aenean tellus metus, bibendum sed, posuere ac, mattis non,
-              nunc. Curabitur suscipit suscipit tellus. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-              lorem. Etiam rhoncus.Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Pellentesque egestas,
-              neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Vestibulum
-              purus quam, scelerisque ut, mollis sed, nonummy id, metus Vestibulum ullamcorper mauris at ligula.
-              Phasellus consectetuer vestibulum elit. Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut
-              nisi.Cum sociis natoque penatibus Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
-              blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
-            </p>`,
-  },
-  {
-    id: 9,
-    title: 'Fugit voluptas sed molestias voluptatem provident',
-    publishedAt: '11 Dec 2021',
-    thumbnailUrl: '/images/posts/post-thumbnail-3.png',
-    imageUrl: '/images/posts/post-03.png',
-    authorName: 'John Doe',
-    content: `
-    <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet Cras id dui. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis.
-              Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis eu pede mollis pretium.
-              Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu, semper a, adipiscing
-              nec
-            </p>
-            <blockquote>
-              A rich text element can be used with static or dynamic content For static content, just drop it into any
-              page
-            </blockquote>
-            <p>
-              Praesent ac sem eget est egestas volutpat. Aenean tellus metus, bibendum sed, posuere ac, mattis non,
-              nunc. Curabitur suscipit suscipit tellus. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-              lorem. Etiam rhoncus.Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Pellentesque egestas,
-              neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Vestibulum
-              purus quam, scelerisque ut, mollis sed, nonummy id, metus Vestibulum ullamcorper mauris at ligula.
-              Phasellus consectetuer vestibulum elit. Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut
-              nisi.Cum sociis natoque penatibus Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
-              blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
-            </p>`,
-  },
-  {
-    id: 10,
-    title: 'Adipisci placeat illum aut reiciendis qui',
-    publishedAt: '10 Dec 2021',
-    thumbnailUrl: '/images/posts/post-thumbnail-4.png',
-    imageUrl: '/images/posts/post-04.png',
-    authorName: 'John Doe',
-    content: `
-    <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet Cras id dui. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis.
-              Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis eu pede mollis pretium.
-              Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu, semper a, adipiscing
-              nec
-            </p>
-            <blockquote>
-              A rich text element can be used with static or dynamic content For static content, just drop it into any
-              page
-            </blockquote>
-            <p>
-              Praesent ac sem eget est egestas volutpat. Aenean tellus metus, bibendum sed, posuere ac, mattis non,
-              nunc. Curabitur suscipit suscipit tellus. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-              lorem. Etiam rhoncus.Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Pellentesque egestas,
-              neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Vestibulum
-              purus quam, scelerisque ut, mollis sed, nonummy id, metus Vestibulum ullamcorper mauris at ligula.
-              Phasellus consectetuer vestibulum elit. Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut
-              nisi.Cum sociis natoque penatibus Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
-              blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
-            </p>`,
-  },
-  {
-    id: 11,
-    title: 'Iusto eius quod necessitatibus culpa ea',
-    publishedAt: '9 Dec 2021',
-    thumbnailUrl: '/images/posts/post-thumbnail-5.png',
-    imageUrl: '/images/posts/post-05.png',
-    authorName: 'John Doe',
-    content: `
-    <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet Cras id dui. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis.
-              Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis eu pede mollis pretium.
-              Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu, semper a, adipiscing
-              nec
-            </p>
-            <blockquote>
-              A rich text element can be used with static or dynamic content For static content, just drop it into any
-              page
-            </blockquote>
-            <p>
-              Praesent ac sem eget est egestas volutpat. Aenean tellus metus, bibendum sed, posuere ac, mattis non,
-              nunc. Curabitur suscipit suscipit tellus. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-              lorem. Etiam rhoncus.Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Pellentesque egestas,
-              neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Vestibulum
-              purus quam, scelerisque ut, mollis sed, nonummy id, metus Vestibulum ullamcorper mauris at ligula.
-              Phasellus consectetuer vestibulum elit. Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut
-              nisi.Cum sociis natoque penatibus Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
-              blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
-            </p>`,
-  },
-  {
-    id: 12,
-    title: 'Neque voluptates ratione',
-    publishedAt: '8 Dec 2021',
-    thumbnailUrl: '/images/posts/post-thumbnail-6.png',
-    imageUrl: '/images/posts/post-06.png',
-    authorName: 'John Doe',
-    content: `
-    <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
-              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet Cras id dui. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis.
-              Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis eu pede mollis pretium.
-              Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu, semper a, adipiscing
-              nec
-            </p>
-            <blockquote>
-              A rich text element can be used with static or dynamic content For static content, just drop it into any
-              page
-            </blockquote>
-            <p>
-              Praesent ac sem eget est egestas volutpat. Aenean tellus metus, bibendum sed, posuere ac, mattis non,
-              nunc. Curabitur suscipit suscipit tellus. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-              lorem. Etiam rhoncus.Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Pellentesque egestas,
-              neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Vestibulum
-              purus quam, scelerisque ut, mollis sed, nonummy id, metus Vestibulum ullamcorper mauris at ligula.
-              Phasellus consectetuer vestibulum elit. Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut
-              nisi.Cum sociis natoque penatibus Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
-              blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
-            </p>`,
+    title: 'Mentoring Junior Developers: The Habits That Actually Help',
+    summary: 'What I learned from mentoring 4+ developers on architecture, code reviews, and career growth. Practical habits that build trust, accelerate learning, and actually stick.',
+    tag: 'Leadership',
+    publishedAt: 'May 2024',
+    readTime: '5 min read',
+    mediumUrl: 'https://medium.com/@rajesh-janyani',
   },
 ];
