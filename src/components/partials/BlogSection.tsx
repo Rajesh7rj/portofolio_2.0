@@ -36,9 +36,9 @@ const BlogSection = () => {
               <span
                 className="flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-medium"
                 style={{
-                  backgroundColor: 'rgba(0,255,136,0.06)',
-                  border: '1px solid rgba(0,255,136,0.15)',
-                  color: tagColors[post.tag] || '#00ff88',
+                  backgroundColor: 'rgba(255, 255, 255,0.06)',
+                  border: '1px solid rgba(255, 255, 255,0.15)',
+                  color: tagColors[post.tag] || '#ffffff',
                   fontFamily: 'JetBrains Mono, monospace',
                 }}
               >
@@ -63,13 +63,13 @@ const BlogSection = () => {
             </p>
 
             {/* Footer */}
-            <div className="flex items-center justify-between border-t pt-4" style={{ borderColor: '#2a2a2a' }}>
+            <div className="flex items-center justify-between border-t pt-4" style={{ borderColor: 'rgba(255,255,255,0.1)' }}>
               <span className="text-xs" style={{ color: '#555', fontFamily: 'JetBrains Mono, monospace' }}>
                 {post.publishedAt}
               </span>
               <span
                 className="flex items-center gap-1 text-xs font-medium transition-colors duration-150 group-hover:text-green-400"
-                style={{ color: '#00ff88', fontFamily: 'JetBrains Mono, monospace' }}
+                style={{ color: '#ffffff', fontFamily: 'JetBrains Mono, monospace' }}
               >
                 Read on Medium <FiArrowUpRight size={12} />
               </span>

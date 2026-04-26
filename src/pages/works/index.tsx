@@ -30,7 +30,7 @@ const WorksPage = () => {
                   {/* Thumbnail */}
                   <div
                     className="relative overflow-hidden"
-                    style={{ height: 190, backgroundColor: '#1a1a1a' }}
+                    style={{ height: 190, backgroundColor: 'rgba(255,255,255,0.02)' }}
                   >
                     {item.thumbnailUrl ? (
                       <Image
@@ -50,8 +50,8 @@ const WorksPage = () => {
                         className="rounded-full px-2.5 py-1 text-xs font-medium"
                         style={{
                           backgroundColor: 'rgba(10,10,10,0.85)',
-                          border: '1px solid rgba(0,255,136,0.3)',
-                          color: '#00ff88',
+                          border: '1px solid rgba(255, 255, 255,0.3)',
+                          color: '#ffffff',
                           fontFamily: 'JetBrains Mono, monospace',
                           backdropFilter: 'blur(6px)',
                         }}
@@ -67,9 +67,9 @@ const WorksPage = () => {
                         onClick={(e) => e.stopPropagation()}
                         className="absolute top-3 right-3 flex items-center gap-1 rounded-full px-2.5 py-1 text-xs opacity-0 transition-opacity duration-200 group-hover:opacity-100"
                         style={{
-                          backgroundColor: 'rgba(0,255,136,0.15)',
-                          border: '1px solid rgba(0,255,136,0.4)',
-                          color: '#00ff88',
+                          backgroundColor: 'rgba(255, 255, 255,0.15)',
+                          border: '1px solid rgba(255, 255, 255,0.4)',
+                          color: '#ffffff',
                         }}
                       >
                         <FiExternalLink size={11} /> Live
@@ -94,8 +94,8 @@ const WorksPage = () => {
                               key={i}
                               className="rounded px-2 py-0.5 text-xs"
                               style={{
-                                backgroundColor: '#1a1a1a',
-                                border: '1px solid #2a2a2a',
+                                backgroundColor: 'rgba(255,255,255,0.02)',
+                                border: '1px solid rgba(255,255,255,0.1)',
                                 color: '#9ca3af',
                                 fontFamily: 'JetBrains Mono, monospace',
                               }}
@@ -111,7 +111,7 @@ const WorksPage = () => {
                         )}
                       </div>
                     )}
-                    <p className="mt-4 text-xs font-medium" style={{ color: '#00ff88', fontFamily: 'JetBrains Mono, monospace' }}>
+                    <p className="mt-4 text-xs font-medium" style={{ color: '#ffffff', fontFamily: 'JetBrains Mono, monospace' }}>
                       View Details →
                     </p>
                   </div>

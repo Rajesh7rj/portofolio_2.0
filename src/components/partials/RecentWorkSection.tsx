@@ -20,7 +20,7 @@ const RecentWorkSection = () => {
             {/* Thumbnail */}
             <div
               className="relative overflow-hidden"
-              style={{ height: 180, backgroundColor: '#1a1a1a' }}
+              style={{ height: 180, backgroundColor: 'rgba(255,255,255,0.02)' }}
             >
               {work.thumbnailUrl ? (
                 <Image
@@ -41,8 +41,8 @@ const RecentWorkSection = () => {
                   className="rounded-full px-2.5 py-1 text-xs font-medium"
                   style={{
                     backgroundColor: 'rgba(10,10,10,0.8)',
-                    border: '1px solid rgba(0,255,136,0.3)',
-                    color: '#00ff88',
+                    border: '1px solid rgba(255, 255, 255,0.3)',
+                    color: '#ffffff',
                     fontFamily: 'JetBrains Mono, monospace',
                     backdropFilter: 'blur(6px)',
                   }}
@@ -58,9 +58,9 @@ const RecentWorkSection = () => {
                   rel="noopener noreferrer"
                   className="absolute top-3 right-3 flex items-center gap-1 rounded-full px-2.5 py-1 text-xs opacity-0 transition-opacity duration-200 group-hover:opacity-100"
                   style={{
-                    backgroundColor: 'rgba(0,255,136,0.15)',
-                    border: '1px solid rgba(0,255,136,0.4)',
-                    color: '#00ff88',
+                    backgroundColor: 'rgba(255, 255, 255,0.15)',
+                    border: '1px solid rgba(255, 255, 255,0.4)',
+                    color: '#ffffff',
                   }}
                 >
                   <FiExternalLink size={12} /> Live
@@ -87,8 +87,8 @@ const RecentWorkSection = () => {
                         key={i}
                         className="rounded px-2 py-0.5 text-xs"
                         style={{
-                          backgroundColor: '#1a1a1a',
-                          border: '1px solid #2a2a2a',
+                          backgroundColor: 'rgba(255,255,255,0.02)',
+                          border: '1px solid rgba(255,255,255,0.1)',
                           color: '#9ca3af',
                           fontFamily: 'JetBrains Mono, monospace',
                         }}

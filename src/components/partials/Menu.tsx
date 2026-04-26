@@ -35,7 +35,7 @@ const Menu = () => {
         <Link href="/">
           <a className="font-mono text-xl font-bold tracking-tight" style={{ color: '#f9fafb' }}>
             <span style={{ color: '#888' }}>&lt;</span>
-            <span style={{ color: '#00ff88' }}>Rajesh Janyani</span>
+            <span style={{ color: '#ffffff' }}>Rajesh Janyani</span>
             <span style={{ color: '#888' }}> /&gt;</span>
           </a>
         </Link>
@@ -48,7 +48,7 @@ const Menu = () => {
               onClick={() => handleNavClick(link.href)}
               className="px-4 py-2 text-sm font-medium transition-colors duration-200"
               style={{ color: '#9ca3af', fontFamily: 'inherit' }}
-              onMouseEnter={e => (e.currentTarget.style.color = '#00ff88')}
+              onMouseEnter={e => (e.currentTarget.style.color = '#ffffff')}
               onMouseLeave={e => (e.currentTarget.style.color = '#9ca3af')}
             >
               {link.label}
@@ -79,7 +79,7 @@ const Menu = () => {
       {open && (
         <div
           className="border-t md:hidden"
-          style={{ backgroundColor: '#111', borderColor: '#2a2a2a' }}
+          style={{ backgroundColor: 'rgba(255,255,255,0.02)', borderColor: 'rgba(255,255,255,0.1)' }}
         >
           <nav className="flex flex-col px-6 py-4 gap-1">
             {navLinks.map((link) => (
@@ -89,7 +89,7 @@ const Menu = () => {
                 className="py-3 text-left text-base font-medium transition-colors duration-150"
                 style={{ color: '#9ca3af', fontFamily: 'inherit', background: 'none', border: 'none', cursor: 'pointer' }}
               >
-                <span style={{ color: '#00ff88', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.75rem', marginRight: '0.5rem' }}>
+                <span style={{ color: '#ffffff', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.75rem', marginRight: '0.5rem' }}>
                   &gt;
                 </span>
                 {link.label}

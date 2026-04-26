@@ -6,12 +6,12 @@ const Footer = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
-    <footer style={{ backgroundColor: '#0a0a0a', borderTop: '1px solid #1e1e1e' }}>
+    <footer style={{ backgroundColor: '#000000', borderTop: '1px solid #1e1e1e' }}>
       <div className="container mx-auto max-w-6xl px-6 py-10">
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
           {/* Brand */}
           <p className="font-mono text-sm" style={{ color: '#9ca3af' }}>
-            <span style={{ color: '#00ff88' }}>Rajesh Janyani</span> — Senior Frontend Developer
+            <span style={{ color: '#ffffff' }}>Rajesh Janyani</span> — Senior Software Engineer
           </p>
 
           {/* Social Links */}
@@ -29,7 +29,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 title={label}
                 style={{ color: '#6b7280', transition: 'color 0.2s' }}
-                onMouseEnter={e => (e.currentTarget.style.color = '#00ff88')}
+                onMouseEnter={e => (e.currentTarget.style.color = '#ffffff')}
                 onMouseLeave={e => (e.currentTarget.style.color = '#6b7280')}
               >
                 {icon}

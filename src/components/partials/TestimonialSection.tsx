@@ -17,7 +17,7 @@ const TestimonialSection = () => {
             className="dark-card flex flex-col gap-5 p-7"
           >
             {/* Quote Icon */}
-            <FiMessageSquare size={24} style={{ color: '#00ff88', opacity: 0.6 }} />
+            <FiMessageSquare size={24} style={{ color: '#ffffff', opacity: 0.6 }} />
 
             {/* Comment */}
             <p
@@ -28,10 +28,10 @@ const TestimonialSection = () => {
             </p>
 
             {/* Author */}
-            <div className="mt-auto flex items-center gap-4 border-t pt-5" style={{ borderColor: '#2a2a2a' }}>
+            <div className="mt-auto flex items-center gap-4 border-t pt-5" style={{ borderColor: 'rgba(255,255,255,0.1)' }}>
               <div
                 className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full"
-                style={{ border: '2px solid rgba(0,255,136,0.3)' }}
+                style={{ border: '2px solid rgba(255, 255, 255,0.3)' }}
               >
                 {review.author.imageUrl ? (
                   <Image
@@ -43,7 +43,7 @@ const TestimonialSection = () => {
                 ) : (
                   <div
                     className="flex h-full w-full items-center justify-center text-sm font-bold"
-                    style={{ backgroundColor: '#1a1a1a', color: '#00ff88' }}
+                    style={{ backgroundColor: 'rgba(255,255,255,0.02)', color: '#ffffff' }}
                   >
                     {review.author.name.charAt(0)}
                   </div>

@@ -10,7 +10,14 @@
 
 /* ─── Base ─────────────────────────────────── */
 body {
-  background-color: #0a0a0a;
+  background-color: #000000;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+  background-position: center top, center center, center center;
+  background-attachment: fixed;
   color: #d1d5db;
   overflow-x: hidden;
   font-family: 'Rubik', sans-serif;
@@ -31,7 +38,7 @@ body {
 /* ─── Section Labels ─────────────────────────── */
 .section-label {
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  color: #00ff88;
+  color: #ffffff;
   font-size: 0.8rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -50,7 +57,7 @@ body {
   display: inline-block;
   width: 10px;
   height: 1.2em;
-  background-color: #00ff88;
+  background-color: #ffffff;
   margin-left: 2px;
   vertical-align: text-bottom;
   animation: blink 1s step-end infinite;
@@ -64,21 +71,21 @@ body {
 /* ─── Cards ─────────────────────────────────── */
 .dark-card {
   background-color: #111111;
-  border: 1px solid #2a2a2a;
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 0.75rem;
   transition: border-color 0.25s, transform 0.25s;
 }
 
 .dark-card:hover {
-  border-color: rgba(0, 255, 136, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-3px);
 }
 
 /* ─── Green Glow Button ─────────────────────── */
 .btn-primary {
   background-color: transparent;
-  color: #00ff88;
-  border: 1px solid #00ff88;
+  color: #ffffff;
+  border: 1px solid #ffffff;
   padding: 0.6rem 1.5rem;
   border-radius: 0.375rem;
   font-family: 'JetBrains Mono', monospace;
@@ -91,15 +98,15 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: rgba(0, 255, 136, 0.1);
-  box-shadow: 0 0 16px rgba(0, 255, 136, 0.35);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.35);
 }
 
 /* ─── Section Divider ────────────────────────── */
 .section-divider {
   width: 40px;
   height: 3px;
-  background: linear-gradient(90deg, #00ff88, transparent);
+  background: linear-gradient(90deg, #ffffff, transparent);
   margin: 0.75rem 0 2rem;
   border-radius: 2px;
 }
@@ -122,7 +129,7 @@ body {
   top: 8px;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(180deg, #00ff88, #2a2a2a);
+  background: linear-gradient(180deg, #ffffff, #2a2a2a);
 }
 
 .timeline-item:last-child::before {
@@ -136,8 +143,8 @@ body {
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background-color: #00ff88;
-  box-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 /* ─── Skill Icons ────────────────────────────── */
@@ -149,20 +156,20 @@ body {
   padding: 1rem;
   border-radius: 0.5rem;
   background: #111;
-  border: 1px solid #2a2a2a;
+  border: 1px solid rgba(255,255,255,0.1);
   transition: border-color 0.2s, box-shadow 0.2s;
   cursor: default;
 }
 
 .skill-icon-wrapper:hover {
-  border-color: rgba(0, 255, 136, 0.5);
-  box-shadow: 0 0 12px rgba(0, 255, 136, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
 /* ─── Scroll-to-top button ───────────────────── */
 .scroll-to-top {
-  background-color: #00ff88 !important;
-  color: #0a0a0a !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
 }
 
 /* ─── Slick (legacy, kept for compat) ───────── */

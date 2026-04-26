@@ -24,7 +24,7 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
           <a
             className="mb-10 inline-flex items-center gap-2 text-sm transition-colors duration-150"
             style={{ color: '#6b7280', fontFamily: 'JetBrains Mono, monospace' }}
-            onMouseEnter={e => (e.currentTarget.style.color = '#00ff88')}
+            onMouseEnter={e => (e.currentTarget.style.color = '#ffffff')}
             onMouseLeave={e => (e.currentTarget.style.color = '#6b7280')}
           >
             <FiArrowLeft size={14} /> Back to Projects
@@ -36,9 +36,9 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
           <span
             className="mb-3 inline-block rounded-full px-3 py-1 text-xs font-medium"
             style={{
-              backgroundColor: 'rgba(0,255,136,0.08)',
-              border: '1px solid rgba(0,255,136,0.25)',
-              color: '#00ff88',
+              backgroundColor: 'rgba(255, 255, 255,0.08)',
+              border: '1px solid rgba(255, 255, 255,0.25)',
+              color: '#ffffff',
               fontFamily: 'JetBrains Mono, monospace',
             }}
           >
@@ -53,7 +53,7 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 inline-flex items-center gap-2 text-sm"
-              style={{ color: '#00ff88', fontFamily: 'JetBrains Mono, monospace' }}
+              style={{ color: '#ffffff', fontFamily: 'JetBrains Mono, monospace' }}
             >
               <FiExternalLink size={14} /> View Live Site
             </a>
@@ -67,7 +67,7 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
               <div
                 key={index}
                 className="overflow-hidden rounded-xl"
-                style={{ border: '1px solid #2a2a2a' }}
+                style={{ border: '1px solid rgba(255,255,255,0.1)' }}
               >
                 <Image
                   src={image}
@@ -90,7 +90,7 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
             <div>
               <h2
                 className="mb-1 text-xs font-semibold uppercase tracking-widest"
-                style={{ color: '#00ff88', fontFamily: 'JetBrains Mono, monospace' }}
+                style={{ color: '#ffffff', fontFamily: 'JetBrains Mono, monospace' }}
               >
                 // Overview
               </h2>
@@ -105,7 +105,7 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
               <div>
                 <h2
                   className="mb-1 text-xs font-semibold uppercase tracking-widest"
-                  style={{ color: '#00ff88', fontFamily: 'JetBrains Mono, monospace' }}
+                  style={{ color: '#ffffff', fontFamily: 'JetBrains Mono, monospace' }}
                 >
                   // Key Features
                 </h2>
@@ -113,7 +113,7 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
                 <ul className="space-y-2">
                   {work.featureList.map((feature, index) => (
                     <li key={index} className="flex items-start gap-3 text-sm" style={{ color: '#9ca3af' }}>
-                      <FiCheckCircle size={15} className="mt-0.5 shrink-0" style={{ color: '#00ff88' }} />
+                      <FiCheckCircle size={15} className="mt-0.5 shrink-0" style={{ color: '#ffffff' }} />
                       {feature}
                     </li>
                   ))}
@@ -127,11 +127,11 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
             {work.techUsed && work.techUsed.length > 0 && (
               <div
                 className="rounded-xl p-6"
-                style={{ backgroundColor: '#111', border: '1px solid #2a2a2a', position: 'sticky', top: '90px' }}
+                style={{ backgroundColor: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.1)', position: 'sticky', top: '90px' }}
               >
                 <h2
                   className="mb-1 text-xs font-semibold uppercase tracking-widest"
-                  style={{ color: '#00ff88', fontFamily: 'JetBrains Mono, monospace' }}
+                  style={{ color: '#ffffff', fontFamily: 'JetBrains Mono, monospace' }}
                 >
                   // Tech Stack
                 </h2>
@@ -164,7 +164,7 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
         {/* CTA */}
         <div
           className="mt-20 rounded-xl p-10 text-center"
-          style={{ backgroundColor: '#111', border: '1px solid rgba(0,255,136,0.15)' }}
+          style={{ backgroundColor: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255, 255, 255,0.15)' }}
         >
           <h2 className="text-2xl font-bold" style={{ color: '#f9fafb' }}>
             Interested in working together?

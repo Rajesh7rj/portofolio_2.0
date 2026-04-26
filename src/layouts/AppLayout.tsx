@@ -31,25 +31,25 @@ const AppLayout: React.FC<Props> = ({ children, title, description }) => {
         <meta property="og:url" content={siteUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content={`${siteUrl}/images/avatar/prof-pic.png`} />
+        <meta property="og:image" content={`${siteUrl}/images/avatar/prof-pic-2.png`} />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content={`${siteUrl}/images/avatar/prof-pic.png`} />
+        <meta name="twitter:image" content={`${siteUrl}/images/avatar/prof-pic-2.png`} />
 
         {/* Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
-      <div className="flex min-h-screen flex-col" style={{ backgroundColor: '#0a0a0a' }}>
+      <div className="flex min-h-screen flex-col" style={{ backgroundColor: '#1e1e24' }}>
         <ScrollToTop
           smooth
           className="scroll-to-top fixed bottom-16 right-8 z-50 cursor-pointer rounded-lg p-3 transition-all duration-200"
           component={
-            <div className="flex justify-center" style={{ color: '#0a0a0a' }}>
+            <div className="flex justify-center" style={{ color: '#1e1e24' }}>
               <FiArrowUp size={16} />
             </div>
           }

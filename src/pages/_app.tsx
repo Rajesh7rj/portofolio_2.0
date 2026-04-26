@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           description: siteDescription,
           images: [
             {
-              url: `${siteUrl}/avatar/prof-pic.png`, // put this in public/
+              url: `${siteUrl}/avatar/prof-pic-2.png`, // put this in public/
               width: 1200,
               height: 630,
               alt: 'Rajesh Janyani Portfolio',

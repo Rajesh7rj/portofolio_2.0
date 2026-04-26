@@ -2,52 +2,46 @@
 // Grouped for display: icon grid in TechStack component
 
 export const techStack = {
-  core: [
-    'JavaScript',
-    'TypeScript',
+  frontend: [
     'React',
     'Next.js',
+    'TypeScript',
+    'Tailwind CSS',
+    'Modern UI Libraries',
   ],
-  stateAndStyling: [
+  architecture: [
     'Redux',
     'Zustand',
-    'React Query',
-    'Tailwind CSS',
-    'Material UI',
-    'Radix UI',
-    'Sass',
+    'Component-Driven Architecture',
+    'Performance Optimization',
   ],
-  toolsAndInfra: [
+  backend: [
     'Node.js',
-    'REST API',
+    'Express',
+    'REST API Design',
     'GraphQL',
+  ],
+  devops: [
     'Git',
-    'GitLab',
+    'CI/CD Pipelines',
     'Vercel',
-    'Postman',
+    'Netlify',
+    'Render',
+  ],
+  modern: [
+    'AI-assisted workflows using ChatGPT and Claude',
   ],
 };
 
 // ─── Engineering Skills ───────────────────────────────────────────────────────
 
 export const skills = [
-  'Frontend Architecture',
-  'Performance Optimization',
-  'Reusable Components',
-  'API Integration',
-  'Responsive UI',
-  'TypeScript Migration',
-  'Code Review',
-  'Team Mentorship',
-  'Sprint Leadership',
-  'Agile / Scrum',
-  'Deployment & CI/CD',
-  'Clean Code Practices',
-  'UI/UX Collaboration',
-  'AI-assisted Development',
-  'Cross-functional Communication',
+  'Agile • Scrum • Waterfall',
+  'Sprint Planning • Code Reviews • CI/CD Workflows',
+  'Clean Code • Collaboration • Continuous Improvement',
 ];
 
 // ─── Dev Tagline ─────────────────────────────────────────────────────────────
 
-export const devTagline = 'Focused on building scalable, high-performance frontend applications.';
+export const devTagline = 'Building scalable products with clean architecture, performance, and real-world impact.';
+// export const devTagline = 'Focused on building scalable, high-performance Software applications.';

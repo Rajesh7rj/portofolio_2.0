@@ -10,7 +10,7 @@ class MyDocument extends Document {
           <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         </Head>
-        <body style={{ backgroundColor: '#0a0a0a' }}>
+        <body style={{ backgroundColor: '#000000' }}>
           <Main />
           <NextScript />
         </body>

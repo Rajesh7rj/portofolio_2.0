@@ -18,7 +18,7 @@ const ExperienceSection = () => {
               <div className="timeline-dot" />
               <div
                 className="rounded-xl p-6"
-                style={{ backgroundColor: '#111', border: '1px solid #2a2a2a' }}
+                style={{ backgroundColor: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.1)' }}
               >
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <div>
@@ -26,15 +26,15 @@ const ExperienceSection = () => {
                       {exp.jobTitle}
                     </h3>
                     <div className="mt-0.5 flex items-center gap-2">
-                      <FiBriefcase size={13} style={{ color: '#00ff88' }} />
-                      <span className="text-sm font-medium" style={{ color: '#00ff88' }}>{exp.company}</span>
+                      <FiBriefcase size={13} style={{ color: '#ffffff' }} />
+                      <span className="text-sm font-medium" style={{ color: '#ffffff' }}>{exp.company}</span>
                     </div>
                   </div>
                   <span
                     className="rounded-full px-3 py-1 text-xs"
                     style={{
-                      backgroundColor: 'rgba(0,255,136,0.06)',
-                      border: '1px solid rgba(0,255,136,0.2)',
+                      backgroundColor: 'rgba(255, 255, 255,0.06)',
+                      border: '1px solid rgba(255, 255, 255,0.2)',
                       color: '#9ca3af',
                       fontFamily: 'JetBrains Mono, monospace',
                       whiteSpace: 'nowrap',
@@ -64,7 +64,7 @@ const ExperienceSection = () => {
               <div className="timeline-dot" />
               <div
                 className="rounded-xl p-6"
-                style={{ backgroundColor: '#111', border: '1px solid #2a2a2a' }}
+                style={{ backgroundColor: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.1)' }}
               >
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <div>
@@ -72,15 +72,15 @@ const ExperienceSection = () => {
                       {edu.degree}
                     </h3>
                     <div className="mt-0.5 flex items-center gap-2">
-                      <FiBookOpen size={13} style={{ color: '#00ff88' }} />
-                      <span className="text-sm" style={{ color: '#00ff88' }}>{edu.school}</span>
+                      <FiBookOpen size={13} style={{ color: '#ffffff' }} />
+                      <span className="text-sm" style={{ color: '#ffffff' }}>{edu.school}</span>
                     </div>
                   </div>
                   <span
                     className="rounded-full px-3 py-1 text-xs"
                     style={{
-                      backgroundColor: 'rgba(0,255,136,0.06)',
-                      border: '1px solid rgba(0,255,136,0.2)',
+                      backgroundColor: 'rgba(255, 255, 255,0.06)',
+                      border: '1px solid rgba(255, 255, 255,0.2)',
                       color: '#9ca3af',
                       fontFamily: 'JetBrains Mono, monospace',
                       whiteSpace: 'nowrap',

@@ -17,9 +17,16 @@ export const experiences: Experience[] = [
   },
   {
     jobTitle: 'Software Developer',
-    company: 'Freelance',
+    company: 'Freelance - Client Work',
     startDate: 'Jan 2022',
     endDate: 'Apr 2023',
     description: 'Responsive web development for diverse clients • API optimization and legacy code refactoring • UI/UX collaboration and modular architecture • Bundle size optimization and clean code practices',
+  },
+  {
+    jobTitle: 'Teacher',
+    company: 'Prayas Tuition Classes',
+    startDate: 'Jul 2017',
+    endDate: 'Oct 2021',
+    description: 'Teaching • Monitoring • Creativity • Student-Centered Learning Approach • Parent-Teacher Communication • Student Engagement • Problem Solving • Effective Doubt Resolution'
   },
 ];

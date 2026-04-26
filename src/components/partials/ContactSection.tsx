@@ -35,8 +35,8 @@ const ContactSection = () => {
 
   const inputStyle: React.CSSProperties = {
     width: '100%',
-    backgroundColor: '#1a1a1a',
-    border: '1px solid #2a2a2a',
+    backgroundColor: 'rgba(255,255,255,0.02)',
+    border: '1px solid rgba(255,255,255,0.1)',
     borderRadius: '0.5rem',
     padding: '0.75rem 1rem',
     color: '#f9fafb',
@@ -62,11 +62,11 @@ const ContactSection = () => {
             <div
               key={label}
               className="flex items-center gap-4 rounded-xl p-5"
-              style={{ backgroundColor: '#111', border: '1px solid #2a2a2a' }}
+              style={{ backgroundColor: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.1)' }}
             >
               <div
                 className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
-                style={{ backgroundColor: 'rgba(0,255,136,0.08)', color: '#00ff88' }}
+                style={{ backgroundColor: 'rgba(255, 255, 255,0.08)', color: '#ffffff' }}
               >
                 {icon}
               </div>
@@ -74,7 +74,7 @@ const ContactSection = () => {
                 <p className="text-xs uppercase tracking-widest" style={{ color: '#555', fontFamily: 'JetBrains Mono, monospace' }}>{label}</p>
                 {href ? (
                   <a href={href} className="text-sm font-medium" style={{ color: '#d1d5db' }}
-                    onMouseEnter={e => e.currentTarget.style.color = '#00ff88'}
+                    onMouseEnter={e => e.currentTarget.style.color = '#ffffff'}
                     onMouseLeave={e => e.currentTarget.style.color = '#d1d5db'}
                   >{value}</a>
                 ) : (
@@ -90,7 +90,7 @@ const ContactSection = () => {
           ref={formRef}
           onSubmit={handleSubmit}
           className="flex flex-col gap-5 rounded-xl p-6 lg:col-span-3"
-          style={{ backgroundColor: '#111', border: '1px solid #2a2a2a' }}
+          style={{ backgroundColor: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.1)' }}
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
@@ -100,7 +100,7 @@ const ContactSection = () => {
                 required
                 placeholder="Your name"
                 style={inputStyle}
-                onFocus={e => e.target.style.borderColor = 'rgba(0,255,136,0.4)'}
+                onFocus={e => e.target.style.borderColor = 'rgba(255, 255, 255,0.4)'}
                 onBlur={e => e.target.style.borderColor = '#2a2a2a'}
               />
             </div>
@@ -112,7 +112,7 @@ const ContactSection = () => {
                 required
                 placeholder="your@email.com"
                 style={inputStyle}
-                onFocus={e => e.target.style.borderColor = 'rgba(0,255,136,0.4)'}
+                onFocus={e => e.target.style.borderColor = 'rgba(255, 255, 255,0.4)'}
                 onBlur={e => e.target.style.borderColor = '#2a2a2a'}
               />
             </div>
@@ -124,7 +124,7 @@ const ContactSection = () => {
               required
               placeholder="What's this about?"
               style={inputStyle}
-              onFocus={e => e.target.style.borderColor = 'rgba(0,255,136,0.4)'}
+              onFocus={e => e.target.style.borderColor = 'rgba(255, 255, 255,0.4)'}
               onBlur={e => e.target.style.borderColor = '#2a2a2a'}
             />
           </div>
@@ -136,7 +136,7 @@ const ContactSection = () => {
               rows={5}
               placeholder="Tell me about your project or opportunity..."
               style={{ ...inputStyle, resize: 'vertical' }}
-              onFocus={e => e.target.style.borderColor = 'rgba(0,255,136,0.4)'}
+              onFocus={e => e.target.style.borderColor = 'rgba(255, 255, 255,0.4)'}
               onBlur={e => e.target.style.borderColor = '#2a2a2a'}
             />
           </div>
@@ -152,7 +152,7 @@ const ContactSection = () => {
           </button>
 
           {status === 'success' && (
-            <p className="text-center text-sm" style={{ color: '#00ff88' }}>
+            <p className="text-center text-sm" style={{ color: '#ffffff' }}>
               ✓ Message sent! I&apos;ll get back to you soon.
             </p>
           )}
