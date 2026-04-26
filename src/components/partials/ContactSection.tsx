@@ -4,9 +4,9 @@ import emailjs from '@emailjs/browser';
 
 // ─── EmailJS Configuration ─────────────────────────────────────────────────
 // Create a free account at https://emailjs.com and fill in your credentials:
-const EMAILJS_SERVICE_ID  = 'service_vags50t';
+const EMAILJS_SERVICE_ID = 'service_vags50t';
 const EMAILJS_TEMPLATE_ID = 'template_24d5uiu';
-const EMAILJS_PUBLIC_KEY  = 'ThqedR6XlwBs8iyYb';
+const EMAILJS_PUBLIC_KEY = 'ThqedR6XlwBs8iyYb';
 // ───────────────────────────────────────────────────────────────────────────
 
 const contactInfo = [
@@ -48,7 +48,7 @@ const ContactSection = () => {
 
   return (
     <div id="contact" className="py-24">
-      <p className="section-label">06. Contact</p>
+      <p className="section-label">&gt; Contact</p>
       <h2 className="section-title">Get In Touch</h2>
       <div className="section-divider" />
       <p className="mb-10 text-sm max-w-lg" style={{ color: '#6b7280' }}>

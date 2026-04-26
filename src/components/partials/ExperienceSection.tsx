@@ -8,7 +8,7 @@ const ExperienceSection = () => {
     <div id="experience" className="py-24">
       {/* Experience */}
       <div>
-        <p className="section-label">02. Experience</p>
+        <p className="section-label">&gt; Experience</p>
         <h2 className="section-title">Where I&apos;ve Worked</h2>
         <div className="section-divider" />
 

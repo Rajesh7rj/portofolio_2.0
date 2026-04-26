@@ -1,13 +1,13 @@
 import React from 'react';
 import { techStack, skills } from '@/data/skills';
 import { FiCheckCircle, FiLayout, FiCpu, FiServer, FiTerminal, FiZap, FiCode } from 'react-icons/fi';
-import { 
-  SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiRedux, SiTailwindcss, 
+import {
+  SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiRedux, SiTailwindcss,
   SiMaterialui, SiNodedotjs, SiGraphql, SiGit, SiGitlab, SiVercel, SiPostman,
-  SiSass, SiExpress, SiNetlify, SiOpenai 
+  SiSass
 } from 'react-icons/si';
 
-// Optional icon mapping — if no icon is mapped, it falls back to a code bracket `</>`
+// Fallback to FiCode if specific logo doesn't exist
 const iconMap: Record<string, React.ReactNode> = {
   'JavaScript': <SiJavascript size={16} color="#f7df1e" />,
   'TypeScript': <SiTypescript size={16} color="#3178c6" />,
@@ -16,12 +16,14 @@ const iconMap: Record<string, React.ReactNode> = {
   'Tailwind CSS': <SiTailwindcss size={16} color="#38bdf8" />,
   'Redux': <SiRedux size={16} color="#764abc" />,
   'Node.js': <SiNodedotjs size={16} color="#68a063" />,
-  'Express': <SiExpress size={16} color="#ffffff" />,
   'GraphQL': <SiGraphql size={16} color="#e10098" />,
   'Git': <SiGit size={16} color="#f05032" />,
   'Vercel': <SiVercel size={16} color="#ffffff" />,
-  'Netlify': <SiNetlify size={16} color="#00d1b2" />,
-  'AI-assisted workflows using ChatGPT and Claude': <SiOpenai size={16} color="#10a37f" />,
+  // Using generic fallbacks for newer tools not in react-icons 4.4.0:
+  'Express': <FiServer size={16} color="#ffffff" />,
+  'Netlify': <FiZap size={16} color="#00d1b2" />,
+  'Render': <FiLayout size={16} color="#46e3b7" />,
+  'AI-assisted workflows using ChatGPT and Claude': <FiCpu size={16} color="#10a37f" />,
 };
 
 type TechCategory = {
@@ -45,7 +47,7 @@ const categories: TechCategory[] = [
 const TechStack = () => {
   return (
     <div id="skills" className="py-24">
-      <p className="section-label">04. Tech Stack</p>
+      <p className="section-label">&gt; Tech Stack</p>
       <h2 className="section-title">Skills & Tools</h2>
       <div className="section-divider" />
 
@@ -83,7 +85,7 @@ const TechStack = () => {
                   {label}
                 </h3>
               </div>
-              
+
               <div className="flex flex-wrap gap-2.5">
                 {techStack[key].map((item) => (
                   <div

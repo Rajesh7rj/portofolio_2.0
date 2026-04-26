@@ -3,31 +3,39 @@ import { Work } from '@/types';
 export const works: Work[] = [
   {
     id: 1,
-    title: 'Tuto.ph — HRMS Admin Panel',
-    category: 'HRMS',
+    title: 'Tubo.ph — Workforce Management & HRMS Platform',
+    category: 'SaaS / HRMS',
     thumbnailUrl: '/images/projects/tubo-2.png',
-    description: `Tubo.ph is a modern HRMS platform for manpower agencies, replacing legacy biometric systems with a cross-platform app (iOS & Android). It handles attendance, payroll, e-wallet transactions, and multi-agency role management — all from a single dashboard.`,
+
+    description: `Tubo.ph is a SaaS-based Workforce Management and HRMS platform built for manpower agencies and SMEs. It replaces traditional attendance systems with a modern, scalable solution for managing attendance, payroll, and workforce operations.
+
+I developed the admin panel and core system workflows, focusing on scalable architecture, role-based access control, and seamless integration of facial verification as part of employee KYC (Know Your Customer) processes.`,
+
     publishedAt: '',
     images: ['/images/projects/tubo-1.png'],
     previewUrl: '',
+
     techUsed: [
-      "Next.js 14.2 — App router, image optimization, exceptional speed and SEO.",
-      "TypeScript — Type safety and maintainable codebase.",
-      "Zustand — Lightweight, scalable state management.",
-      "Radix UI — Accessible, unstyled component primitives.",
-      "Tailwind CSS — Utility-first, fully responsive UI.",
-      "Authsignal — Secure, seamless authentication flows.",
-      "GitLab — Version control, CI/CD pipelines.",
+      "Next.js — App Router, SSR/ISR, performance optimization",
+      "TypeScript — Scalable and maintainable codebase",
+      "Zustand — Lightweight state management",
+      "Tailwind CSS + Radix UI — Accessible, responsive UI system",
+      "Node.js APIs — Data handling and system integration",
+      "Authsignal — Secure authentication and identity flows",
+      "Luxand — Facial verification integration",
+      "GitLab — Version control and CI/CD pipelines"
     ],
+
     featureList: [
-      "Multi-agency hierarchy: Super Admin, Admin, HR, Employee, External User",
-      "Role-based dashboard views and granular permissions",
-      "Real-time attendance tracking, shift scheduling, and leave management",
-      "E-Wallet system: top-up, salary disbursement, bill payments, load purchases",
-      "Maker / Checker / Approver transaction workflow",
-      "Payroll management with automatic payment notifications",
-      "Audit logs and transaction history for compliance",
-      "Centralized analytics dashboard",
+      "Designed multi-tenant, role-based system (Super Admin, Admin, HR, Employee)",
+      "Implemented granular RBAC with dynamic dashboard views",
+      "Built real-time attendance tracking, shift scheduling, and leave workflows",
+      "Developed e-wallet system for salary disbursement and transactions",
+      "Implemented maker-checker-approver workflow for secure operations",
+      "Designed and integrated facial verification for employee KYC and identity validation",
+      "Developed payroll workflows with automated notifications",
+      "Built audit logs and transaction tracking for compliance",
+      "Designed centralized analytics dashboard for operational insights"
     ]
   },
   {
@@ -46,6 +54,8 @@ export const works: Work[] = [
       "Redux Toolkit — Centralized state for cart and wishlist.",
       "EmailJS — Contact and inquiry form submissions.",
       "React Slick — Interactive product sliders.",
+      "Node JS — Backend for admin panel.",
+      "MongoDB — Database for admin panel.",
     ],
     featureList: [
       "Full product catalog: Rings, Earrings, Necklaces, Custom Jewelry",
@@ -70,6 +80,8 @@ export const works: Work[] = [
       "Material UI — Consistent, responsive design system.",
       "Redux Toolkit — Efficient global state management.",
       "Date-fns / Moment — Date parsing, formatting, and manipulation.",
+      "Node JS — Backend for admin panel.",
+      "MySQL — Database for admin panel.",
     ],
     featureList: [
       "Admin panel: employee management, asset allocation, attendance, leave, policy dissemination",
@@ -86,7 +98,7 @@ export const works: Work[] = [
     description: `Multilingual corporate website for Kohereza International, an import-export company from Surat. Built with Next.js 14.2 with i18n support for 10 languages, SSG for blazing performance, and SEO optimization to drive global reach.`,
     publishedAt: '',
     images: ["/images/projects/kohereza.png"],
-    previewUrl: 'https://www.kohereza.com',
+    previewUrl: '',
     techUsed: [
       "Next.js 14.2 — SSG, app routing, image optimization.",
       "TypeScript — Type-safe, maintainable codebase.",

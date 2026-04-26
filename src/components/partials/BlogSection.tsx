@@ -3,18 +3,18 @@ import { blogPosts } from '@/data/posts';
 import { FiArrowUpRight, FiClock, FiTag } from 'react-icons/fi';
 
 const tagColors: Record<string, string> = {
-  Performance:  '#f59e0b',
+  Performance: '#f59e0b',
   Architecture: '#818cf8',
-  Components:   '#22d3ee',
-  'Next.js':    '#f9fafb',
-  TypeScript:   '#3b82f6',
-  Leadership:   '#a78bfa',
+  Components: '#22d3ee',
+  'Next.js': '#f9fafb',
+  TypeScript: '#3b82f6',
+  Leadership: '#a78bfa',
 };
 
 const BlogSection = () => {
   return (
     <div id="blog" className="py-24">
-      <p className="section-label">06. Writing</p>
+      <p className="section-label">&gt; Writing</p>
       <h2 className="section-title">Blog & Articles</h2>
       <div className="section-divider" />
       <p className="mb-10 max-w-lg text-sm" style={{ color: '#6b7280' }}>

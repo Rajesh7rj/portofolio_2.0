@@ -6,7 +6,7 @@ import { FiMessageSquare } from 'react-icons/fi';
 const TestimonialSection = () => {
   return (
     <div id="testimonials" className="py-24">
-      <p className="section-label">05. Testimonials</p>
+      <p className="section-label">&gt; Testimonials</p>
       <h2 className="section-title">What People Say</h2>
       <div className="section-divider" />
 

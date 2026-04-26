@@ -48,7 +48,7 @@ const AboutSection = () => {
     <div id="about" className="py-20">
       {/* Section Header */}
       <div>
-        <p className="section-label">01. About Me</p>
+        <p className="section-label">&gt; About Me</p>
         <h2 className="section-title">Who I Am</h2>
         <div className="section-divider" />
       </div>
