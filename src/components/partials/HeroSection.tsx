@@ -56,7 +56,7 @@ const HeroSection = () => {
             boxShadow: '0 0 28px rgba(255, 255, 255,0.15)',
           }}
         >
-          <Image src="/images/avatar/prof-pic-2.png" layout="fill" objectFit="cover" alt="Rajesh Janyani" priority />
+          <Image src="/images/avatar/prof-pic-2.png" layout="fill" objectFit="cover" alt="Rajesh Janyani" priority className='min-w-[126px] min-h-[138px]'/>
         </div>
 
         {/* Name */}
@@ -116,7 +116,7 @@ const HeroSection = () => {
           <button onClick={() => scrollTo('#projects')} className="btn-primary">
             View My Work
           </button>
-          <a href="/Resume-Rajesh-Janyani.pdf" download>
+          <a href="/Rajesh_Janyani.pdf" download>
             <button
               className="flex items-center gap-2 rounded-md px-5 py-2.5 text-sm font-medium transition-all duration-200"
               style={{

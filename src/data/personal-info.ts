@@ -15,6 +15,7 @@ export const personalInfo = {
     let mos = now.getMonth() - start.getMonth();
     if (mos < 0) { yrs -= 1; mos += 12; }
     const expStr = mos > 0 ? `${yrs} years ${mos} months` : `${yrs} years`;
-    return `Senior Software Engineer with ${expStr} of experience building scalable, high-performance web applications. Expert in React and Next.js, with solid backend experience in Node.js and API development. Focused on clean architecture, performance optimization, and delivering user-centric solutions, while leveraging modern AI-assisted development workflows to improve efficiency and code quality.`;
+    return `Senior Software Engineer with ${expStr} of experience building scalable, high-performance SaaS and web applications. Specialized in React.js, Next.js, and TypeScript, with expertise in frontend architecture, performance optimization, and delivering responsive, user-centric solutions. Possesses working knowledge of Node.js, Express.js, and REST APIs, with experience leading Agile deliveries, mentoring developers, and utilizing AI-powered developer tools to improve productivity and code quality.`;
   }
 };
+

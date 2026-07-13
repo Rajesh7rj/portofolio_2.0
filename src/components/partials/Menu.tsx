@@ -55,7 +55,7 @@ const Menu = () => {
             </button>
           ))}
           <a
-            href="/Resume-Rajesh-Janyani.pdf"
+            href="/Rajesh_Janyani.pdf"
             download
             className="btn-primary ml-4"
             style={{ fontSize: '0.8rem', padding: '0.45rem 1rem' }}
@@ -96,7 +96,7 @@ const Menu = () => {
               </button>
             ))}
             <a
-              href="/Resume-Rajesh-Janyani.pdf"
+              href="/Rajesh_Janyani.pdf"
               download
               className="btn-primary mt-2"
             >

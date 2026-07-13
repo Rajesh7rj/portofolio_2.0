@@ -2,10 +2,17 @@ import { Experience } from '@/types';
 
 export const experiences: Experience[] = [
   {
+    jobTitle: 'Senior Software Developer / Frontend Team Lead',
+    company: 'Rudraak Technologies',
+    startDate: 'Aug 2025',
+    endDate: 'Present',
+    description: 'Leading frontend architecture and team delivery • Mentoring developers via code reviews • Sprint planning and cross-functional coordination • Building scalable component system',
+  },
+  {
     jobTitle: 'Senior Software Developer',
     company: 'Heliconia Solutions',
     startDate: 'Oct 2024',
-    endDate: 'Present',
+    endDate: 'Jun 2025',
     description: 'Leading Agile sprints and cross-functional delivery • Mentoring developers and conducting code reviews • REST API integration and performance optimization • Deployment and release management • Customer-centric problem solving and ownership',
   },
   {
